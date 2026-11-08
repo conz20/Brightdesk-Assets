@@ -45,8 +45,12 @@ function contentMatches(filePath, bytes) {
     case '.gif': return bytes.length >= 6 && ['GIF87a', 'GIF89a'].includes(bytes.toString('ascii', 0, 6));
     case '.pdf': return bytes.length >= 5 && bytes.toString('ascii', 0, 5) === '%PDF-';
     case '.svg': {
-      const text = new TextDecoder('utf-8', { fatal: true }).decode(bytes).replace(/^\uFEFF/, '').trimStart();
-      return /^(?:<\?xml[^>]*>\s*)?<svg(?:\s|>)/i.test(text);
+      try {
+        const text = new TextDecoder('utf-8', { fatal: true }).decode(bytes).replace(/^\uFEFF/, '').trimStart();
+        return /^(?:<\?xml[^>]*>\s*)?<svg(?:\s|>)/i.test(text);
+      } catch {
+        return false;
+      }
     }
     case '.ico': return bytes.length >= 4 && bytes.subarray(0, 4).equals(Buffer.from([0, 0, 1, 0]));
     case '.icns': return bytes.length >= 8 && bytes.toString('ascii', 0, 4) === 'icns';
