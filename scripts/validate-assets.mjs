@@ -57,7 +57,8 @@ function contentMatches(filePath, bytes) {
 }
 
 async function safeFile(rootDir, relativePath) {
-  if (!nonEmpty(relativePath) || !/^[A-Za-z0-9][A-Za-z0-9._/-]*$/.test(relativePath) || path.posix.isAbsolute(relativePath)) {    return { error: 'unsafe relative path' };
+  if (!nonEmpty(relativePath) || !/^[A-Za-z0-9][A-Za-z0-9._/-]*$/.test(relativePath) || path.posix.isAbsolute(relativePath)) {
+    return { error: 'unsafe relative path' };
   }
   const parts = relativePath.split('/');
   if (parts.some((part) => !part || part === '.' || part === '..')) return { error: 'unsafe relative path' };
