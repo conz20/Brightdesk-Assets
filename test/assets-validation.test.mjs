@@ -255,3 +255,13 @@ test('requires screenshot workflow evidence URLs to use the schema absolute HTTP
   assert.equal(result.valid, false);
   assert.ok(result.errors.some((message) => message.includes('workflowUrl must be an HTTPS URL')));
 });
+
+test('rejects invalid UTF-8 SVG payloads without crashing validation', async (t) => {
+  const f = await fixture(t);
+  const malformedSvg = Buffer.from([0x3c, 0x73, 0x76, 0x67, 0xff]);
+  await writeFile(path.join(f.rootDir, 'assets', 'logo.svg'), malformedSvg);
+  f.record.sha256 = digest(malformedSvg);
+  const result = await validateManifest(f.manifest, { rootDir: f.rootDir });
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((message) => message.includes('file content does not match the declared format')));
+});
