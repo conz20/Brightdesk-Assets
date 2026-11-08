@@ -54,8 +54,8 @@
             "name": { "type": "string", "minLength": 1 },
             "evidencePath": { "$ref": "#/$defs/relativePath" },
             "evidenceSha256": { "$ref": "#/$defs/sha256" },
-            "redistribution": { "enum": ["approved", "review-required", "denied"] },
-            "bundleAllowed": { "type": "boolean" },
+            "redistribution": { "const": "approved" },
+            "bundleAllowed": { "const": true },
             "attributionRequired": { "type": "boolean" },
             "attributionText": { "type": "string" }
           },
@@ -89,6 +89,10 @@
         {
           "if": { "properties": { "classification": { "const": "concept" } }, "required": ["classification"] },
           "then": { "not": { "required": ["verification"] } }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "screenshot" } }, "required": ["kind"] },
+          "then": { "properties": { "classification": { "enum": ["verified-screenshot", "concept"] } } }
         }
       ]
     }
