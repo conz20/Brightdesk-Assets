@@ -26,6 +26,16 @@ function stringField(errors, value, field) {
   if (!nonEmpty(value)) errors.push(field + ' must be a non-empty string');
 }
 
+function isAbsoluteHttpsUrl(value) {
+  if (typeof value !== 'string' || !value.startsWith('https://')) return false;
+  try {
+    const url = new URL(value);
+    return url.protocol === 'https:' && url.hostname.length > 0;
+  } catch {
+    return false;
+  }
+}
+
 function contentMatches(filePath, bytes) {
   switch (path.posix.extname(filePath).toLowerCase()) {
     case '.png': return bytes.length >= 8 && bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
@@ -47,7 +57,7 @@ function contentMatches(filePath, bytes) {
 }
 
 async function safeFile(rootDir, relativePath) {
-  if (!nonEmpty(relativePath) || relativePath.includes('\\') || relativePath.includes('\0') || path.posix.isAbsolute(relativePath)) {
+  if (!nonEmpty(relativePath) || !/^[A-Za-z0-9][A-Za-z0-9._/-]*$/.test(relativePath) || relativePath.includes('\\\\') || relativePath.includes('\\0') || path.posix.isAbsolute(relativePath)) {
     return { error: 'unsafe relative path' };
   }
   const parts = relativePath.split('/');
@@ -104,9 +114,7 @@ function checkVerification(asset, index, errors) {
     stringField(errors, value.appVersion, prefix + '.appVersion');
     stringField(errors, value.testedWorkflow, prefix + '.testedWorkflow');
     if (!COMMIT.test(value.sourceCommit || '')) errors.push(prefix + '.sourceCommit must be a full Git commit SHA');
-    try {
-      if (new URL(value.workflowUrl).protocol !== 'https:') throw new Error('not HTTPS');
-    } catch {
+    if (!isAbsoluteHttpsUrl(value.workflowUrl)) {
       errors.push(prefix + '.workflowUrl must be an HTTPS URL to the recorded workflow evidence');
     }
   } else if (asset.kind === 'screenshot' && asset.classification !== 'concept') {
@@ -175,9 +183,8 @@ export async function validateManifest(manifest, options = {}) {
       if (!['original', 'third-party', 'generated'].includes(source.type)) errors.push(prefix + '.source.type is not supported');
       stringField(errors, source.creator, prefix + '.source.creator');
       stringField(errors, source.reference, prefix + '.source.reference');
-      if (source.type === 'third-party') {
-        try { if (new URL(source.reference).protocol !== 'https:') throw new Error('not HTTPS'); }
-        catch { errors.push(prefix + '.source.reference must be an HTTPS source URL for third-party assets'); }
+      if (source.type === 'third-party' && !isAbsoluteHttpsUrl(source.reference)) {
+        errors.push(prefix + '.source.reference must be an HTTPS source URL for third-party assets');
       }
     }
 
