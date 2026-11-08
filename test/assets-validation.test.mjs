@@ -265,3 +265,15 @@ test('rejects invalid UTF-8 SVG payloads without crashing validation', async (t)
   assert.equal(result.valid, false);
   assert.ok(result.errors.some((message) => message.includes('file content does not match the declared format')));
 });
+
+test('keeps the JSON Schema aligned with the approved-only runtime registry', async () => {
+  const schema = JSON.parse(await readFile(new URL('../schemas/asset-manifest.schema.json', import.meta.url), 'utf8'));
+  const asset = schema.$defs.asset;
+  assert.equal(asset.properties.rights.properties.redistribution.const, 'approved');
+  assert.equal(asset.properties.rights.properties.bundleAllowed.const, true);
+  assert.ok(asset.allOf.some((rule) =>
+    rule.if?.properties?.kind?.const === 'screenshot' &&
+    rule.then?.properties?.classification?.enum?.includes('concept') &&
+    rule.then?.properties?.classification?.enum?.includes('verified-screenshot')
+  ));
+});
