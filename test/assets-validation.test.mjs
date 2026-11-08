@@ -214,3 +214,44 @@ test('rejects unsupported file extensions', async (t) => {
   assert.equal(result.valid, false);
   assert.ok(result.errors.some((message) => message.includes('unsupported asset format')));
 });
+
+
+test('rejects path characters outside the manifest schema relative-path contract', async (t) => {
+  const f = await fixture(t);
+  const invalidPath = 'assets/logo image.svg';
+  await writeFile(path.join(f.rootDir, 'assets', 'logo image.svg'), f.assetBytes);
+  f.record.path = invalidPath;
+  const result = await validateManifest(f.manifest, { rootDir: f.rootDir });
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((message) => message.includes('unsafe relative path')));
+});
+
+test('requires third-party HTTPS references to use the schema absolute URL form', async (t) => {
+  const f = await fixture(t);
+  f.record.source = { type: 'third-party', creator: 'Example creator', reference: 'https:example.com/asset.svg' };
+  const result = await validateManifest(f.manifest, { rootDir: f.rootDir });
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((message) => message.includes('HTTPS source URL')));
+});
+
+test('requires screenshot workflow evidence URLs to use the schema absolute HTTPS form', async (t) => {
+  const f = await fixture(t);
+  const pngBytes = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0x00]);
+  await writeFile(path.join(f.rootDir, 'assets', 'actual-build.png'), pngBytes);
+  f.record.path = 'assets/actual-build.png';
+  f.record.kind = 'screenshot';
+  f.record.classification = 'verified-screenshot';
+  f.record.products = ['pages'];
+  f.record.sha256 = digest(pngBytes);
+  f.record.verification = {
+    product: 'pages',
+    platform: 'macos-arm64',
+    appVersion: '0.1.0',
+    sourceCommit: 'c'.repeat(40),
+    testedWorkflow: 'Pages UI acceptance',
+    workflowUrl: 'https:github.com/conz20/Brightdesk-Pages/actions/runs/123'
+  };
+  const result = await validateManifest(f.manifest, { rootDir: f.rootDir });
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((message) => message.includes('workflowUrl must be an HTTPS URL')));
+});
