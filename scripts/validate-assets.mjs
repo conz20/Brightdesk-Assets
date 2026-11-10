@@ -30,7 +30,7 @@ function isAbsoluteHttpsUrl(value) {
   if (typeof value !== 'string' || !value.startsWith('https://')) return false;
   try {
     const url = new URL(value);
-    return url.protocol === 'https:' && url.hostname.length > 0;
+    return url.protocol === 'https:' && url.hostname.length > 0 && !url.username && !url.password;
   } catch {
     return false;
   }
