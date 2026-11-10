@@ -277,3 +277,36 @@ test('keeps the JSON Schema aligned with the approved-only runtime registry', as
     rule.then?.properties?.classification?.enum?.includes('verified-screenshot')
   ));
 });
+
+
+test('rejects HTTPS provenance and workflow URLs that embed credentials', async (t) => {
+  const f = await fixture(t);
+  f.record.source = {
+    type: 'third-party',
+    creator: 'Example creator',
+    reference: 'https://user:secret@example.com/asset.svg'
+  };
+  let result = await validateManifest(f.manifest, { rootDir: f.rootDir });
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((message) => message.includes('HTTPS source URL')));
+
+  const screenshot = await fixture(t);
+  const pngBytes = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0x00]);
+  await writeFile(path.join(screenshot.rootDir, 'assets', 'actual-build.png'), pngBytes);
+  screenshot.record.path = 'assets/actual-build.png';
+  screenshot.record.kind = 'screenshot';
+  screenshot.record.classification = 'verified-screenshot';
+  screenshot.record.products = ['pages'];
+  screenshot.record.sha256 = digest(pngBytes);
+  screenshot.record.verification = {
+    product: 'pages',
+    platform: 'macos-arm64',
+    appVersion: '0.1.0',
+    sourceCommit: 'd'.repeat(40),
+    testedWorkflow: 'Pages UI acceptance',
+    workflowUrl: 'https://user:secret@github.com/conz20/Brightdesk-Pages/actions/runs/123'
+  };
+  result = await validateManifest(screenshot.manifest, { rootDir: screenshot.rootDir });
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((message) => message.includes('workflowUrl must be an HTTPS URL')));
+});
