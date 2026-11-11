@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { mkdtemp, mkdir, open, readFile, rm, symlink, unlink, writeFile } from 'node:fs/promises';
+import { mkdtemp, mkdir, open, readFile, realpath, rm, symlink, unlink, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { validateManifest } from '../scripts/validate-assets.mjs';
@@ -327,7 +327,7 @@ test('rejects asset bytes reused as their own rights evidence', async (t) => {
 test('rejects an asset replaced by a symlink between path inspection and file open', async (t) => {
   if (process.platform === 'win32') return t.skip('Symlink replacement is covered on POSIX runners.');
   const f = await fixture(t);
-  const assetPath = path.join(f.rootDir, 'assets', 'logo.svg');
+  const assetPath = path.join(await realpath(f.rootDir), 'assets', 'logo.svg');
   const outsidePath = path.join(f.rootDir, 'replacement-outside.svg');
   await writeFile(outsidePath, Buffer.from('<svg>replacement with different length</svg>'));
   let replaced = false;
