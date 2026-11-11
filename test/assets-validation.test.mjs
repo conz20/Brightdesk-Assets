@@ -310,3 +310,15 @@ test('rejects HTTPS provenance and workflow URLs that embed credentials', async 
   assert.equal(result.valid, false);
   assert.ok(result.errors.some((message) => message.includes('workflowUrl must be an HTTPS URL')));
 });
+
+test('rejects asset bytes reused as their own rights evidence', async (t) => {
+  const f = await fixture(t);
+  await writeFile(path.join(f.rootDir, 'legal', 'copied-logo.svg'), f.assetBytes);
+  f.record.rights.evidencePath = 'legal/copied-logo.svg';
+  f.record.rights.evidenceSha256 = digest(f.assetBytes);
+
+  const result = await validateManifest(f.manifest, { rootDir: f.rootDir });
+
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((message) => message.includes('rights evidence must be distinct from the asset file')));
+});
