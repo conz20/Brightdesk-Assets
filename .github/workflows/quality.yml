@@ -24,7 +24,7 @@ concurrency:
 jobs:
   quality:
     name: Verify governed asset records
-    runs-on: [self-hosted, macOS, ARM64, brightdesk-product-ci]
+    runs-on: [self-hosted, macOS, ARM64]
     timeout-minutes: 15
     steps:
       - name: Check out Brightdesk Assets
