@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
-import { lstat, readFile, realpath } from 'node:fs/promises';
+import { constants as fsConstants } from 'node:fs';
+import { lstat, open, readFile, realpath } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
@@ -60,7 +61,7 @@ function contentMatches(filePath, bytes) {
   }
 }
 
-async function safeFile(rootDir, relativePath) {
+async function safeFile(rootDir, relativePath, openAsset = open) {
   if (!nonEmpty(relativePath) || !/^[A-Za-z0-9][A-Za-z0-9._/-]*$/.test(relativePath) || path.posix.isAbsolute(relativePath)) {
     return { error: 'unsafe relative path' };
   }
@@ -73,6 +74,7 @@ async function safeFile(rootDir, relativePath) {
   if (!rel || rel === '..' || rel.startsWith('..' + path.sep) || path.isAbsolute(rel)) return { error: 'unsafe relative path' };
 
   let current = root;
+  let metadata = null;
   for (let index = 0; index < parts.length; index += 1) {
     current = path.join(current, parts[index]);
     let info;
@@ -81,9 +83,28 @@ async function safeFile(rootDir, relativePath) {
     if (info.isSymbolicLink()) return { error: 'symbolic links are not allowed: ' + relativePath };
     if (index < parts.length - 1 && !info.isDirectory()) return { error: 'path component is not a directory: ' + relativePath };
     if (index === parts.length - 1 && !info.isFile()) return { error: 'asset/evidence path must be a regular file: ' + relativePath };
+    if (index === parts.length - 1) metadata = info;
   }
-  try { return { bytes: await readFile(current) }; }
-  catch { return { error: 'file does not exist or cannot be read: ' + relativePath }; }
+
+  let fileHandle;
+  try {
+    const flags = fsConstants.O_RDONLY | (fsConstants.O_NOFOLLOW ?? 0);
+    fileHandle = await openAsset(current, flags);
+    const openedMetadata = await fileHandle.stat();
+    if (!openedMetadata.isFile() ||
+        openedMetadata.dev !== metadata.dev ||
+        openedMetadata.ino !== metadata.ino ||
+        openedMetadata.size !== metadata.size) {
+      return { error: 'file changed during validation: ' + relativePath };
+    }
+    return { bytes: await fileHandle.readFile() };
+  } catch {
+    return { error: 'file does not exist or cannot be read: ' + relativePath };
+  } finally {
+    if (fileHandle) {
+      try { await fileHandle.close(); } catch {}
+    }
+  }
 }
 
 function checkRights(asset, index, errors) {
@@ -136,6 +157,7 @@ function checkVerification(asset, index, errors) {
 
 export async function validateManifest(manifest, options = {}) {
   const rootDir = options.rootDir || process.cwd();
+  const openAsset = options.openAsset || open;
   const errors = [];
   if (!manifest || typeof manifest !== 'object' || Array.isArray(manifest)) {
     return { valid: false, checkedAssets: 0, errors: ['manifest must be a JSON object'] };
@@ -198,7 +220,7 @@ export async function validateManifest(manifest, options = {}) {
     checkVerification(asset, index, errors);
     if (!SHA.test(asset.sha256 || '')) errors.push(prefix + '.sha256 must be a 64-character SHA-256 hex digest');
     if (nonEmpty(asset.path) && SHA.test(asset.sha256 || '')) {
-      const file = await safeFile(rootDir, asset.path);
+      const file = await safeFile(rootDir, asset.path, openAsset);
       if (file.error) errors.push(prefix + ': ' + file.error);
       else {
         checkedAssets += 1;
@@ -211,7 +233,7 @@ export async function validateManifest(manifest, options = {}) {
       }
     }
     if (asset.rights && nonEmpty(asset.rights.evidencePath) && SHA.test(asset.rights.evidenceSha256 || '')) {
-      const evidence = await safeFile(rootDir, asset.rights.evidencePath);
+      const evidence = await safeFile(rootDir, asset.rights.evidencePath, openAsset);
       if (evidence.error) errors.push(prefix + ': cannot read rights evidence (' + evidence.error + ')');
       else {
         const actual = createHash('sha256').update(evidence.bytes).digest('hex');
