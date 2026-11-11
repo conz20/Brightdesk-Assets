@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { mkdtemp, mkdir, readFile, rm, symlink, writeFile } from 'node:fs/promises';
+import { mkdtemp, mkdir, open, readFile, rm, symlink, unlink, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { validateManifest } from '../scripts/validate-assets.mjs';
@@ -321,4 +321,32 @@ test('rejects asset bytes reused as their own rights evidence', async (t) => {
 
   assert.equal(result.valid, false);
   assert.ok(result.errors.some((message) => message.includes('rights evidence must be distinct from the asset file')));
+});
+
+
+test('rejects an asset replaced by a symlink between path inspection and file open', async (t) => {
+  if (process.platform === 'win32') return t.skip('Symlink replacement is covered on POSIX runners.');
+  const f = await fixture(t);
+  const assetPath = path.join(f.rootDir, 'assets', 'logo.svg');
+  const outsidePath = path.join(f.rootDir, 'replacement-outside.svg');
+  await writeFile(outsidePath, Buffer.from('<svg>replacement with different length</svg>'));
+  let replaced = false;
+
+  const result = await validateManifest(f.manifest, {
+    rootDir: f.rootDir,
+    openAsset: async (filePath, flags) => {
+      if (filePath === assetPath && !replaced) {
+        await unlink(filePath);
+        await symlink(outsidePath, filePath);
+        replaced = true;
+      }
+      return open(filePath, flags);
+    }
+  });
+
+  assert.equal(replaced, true);
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((message) =>
+    message.includes('file does not exist or cannot be read') || message.includes('file changed during validation')
+  ));
 });
