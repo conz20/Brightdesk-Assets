@@ -149,6 +149,8 @@ export async function validateManifest(manifest, options = {}) {
   const paths = new Set();
   const digests = new Set();
   let checkedAssets = 0;
+  const assetDigests = new Set();
+  const rightsEvidenceDigests = [];
 
   for (const [index, asset] of manifest.assets.entries()) {
     const prefix = 'assets[' + index + ']';
@@ -201,6 +203,7 @@ export async function validateManifest(manifest, options = {}) {
       else {
         checkedAssets += 1;
         const actual = createHash('sha256').update(file.bytes).digest('hex');
+        assetDigests.add(actual);
         if (actual !== asset.sha256.toLowerCase()) errors.push(prefix + ' SHA-256 mismatch for ' + asset.path);
         if (!contentMatches(asset.path, file.bytes)) errors.push(prefix + ' file content does not match the declared format: ' + asset.path);
         if (digests.has(actual)) errors.push(prefix + ' has duplicate asset content (SHA-256 ' + actual + '); reuse one manifest entry for shared assets');
@@ -213,7 +216,13 @@ export async function validateManifest(manifest, options = {}) {
       else {
         const actual = createHash('sha256').update(evidence.bytes).digest('hex');
         if (actual !== asset.rights.evidenceSha256.toLowerCase()) errors.push(prefix + ' rights evidence SHA-256 mismatch');
+        rightsEvidenceDigests.push({ index, digest: actual });
       }
+    }
+  }
+  for (const evidence of rightsEvidenceDigests) {
+    if (assetDigests.has(evidence.digest)) {
+      errors.push('assets[' + evidence.index + '] rights evidence must be distinct from the asset file; its content matches an asset in the manifest');
     }
   }
   return { valid: errors.length === 0, checkedAssets, errors };
