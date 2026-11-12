@@ -381,3 +381,23 @@ test('rejects Windows-reserved device names in every asset path component', asyn
     );
   }
 });
+
+
+test('JSON Schema rejects Windows-reserved device names in every asset path component', async () => {
+  const schema = JSON.parse(await readFile(new URL('../schemas/asset-manifest.schema.json', import.meta.url), 'utf8'));
+  const pathPattern = new RegExp(schema.$defs.relativePath.pattern);
+  const invalidPaths = [
+    'assets/CON.svg',
+    'assets/con.svg',
+    'assets/NUL.svg',
+    'assets/PRN.svg',
+    'assets/AUX.svg',
+    'assets/COM1.svg',
+    'assets/LPT9.svg',
+    'CON/assets.svg'
+  ];
+
+  for (const relativePath of invalidPaths) {
+    assert.equal(pathPattern.test(relativePath), false, `schema accepted Windows-reserved path: ${relativePath}`);
+  }
+});
