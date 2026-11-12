@@ -56,7 +56,7 @@ References:
 
 ## Portfolio-wide follow-up checks
 
-- Correct legacy `connormolloy12` repository links to the current `conz20` repository locations where they refer to this portfolio.
+- Correct legacy `connormolloy12` repository links to the current `conz20` locations. The scan found old-owner references in the Suite README, all ten product READMEs, Brightdesk-AI, Brightdesk-Release-Tools, and Brightdesk-Type-Preview; confirm each destination before changing it. The other scanned root READMEs did not contain that legacy owner.
 - Review all app-preview SVGs and README captions together so the ten product pages use one consistent presentation standard.
 - Check internal legacy asset names such as `loop.svg` and `slides.svg` against source references and customer-visible navigation. Do not delete them until compatibility and build references are checked; the approved customer-facing product list remains exactly ten.
 - Review the Suite README's old collage and the App Centre/Home design references together. Avoid duplicate or conflicting hero imagery.
