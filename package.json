@@ -1,0 +1,14 @@
+{
+  "name": "@brightdesk/assets",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline-first visual asset registry and validation for Brightdesk.",
+  "engines": {
+    "node": "24.22.2"
+  },
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate-assets.mjs"
+  }
+}
