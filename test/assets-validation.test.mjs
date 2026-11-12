@@ -350,3 +350,34 @@ test('rejects an asset replaced by a symlink between path inspection and file op
     message.includes('file does not exist or cannot be read') || message.includes('file changed during validation')
   ));
 });
+
+
+test('rejects Windows-reserved device names in every asset path component', async (t) => {
+  const f = await fixture(t);
+  const invalidPaths = [
+    'assets/CON.svg',
+    'assets/con.svg',
+    'assets/NUL.svg',
+    'assets/PRN.svg',
+    'assets/AUX.svg',
+    'assets/COM1.svg',
+    'assets/LPT9.svg',
+    'CON/assets.svg'
+  ];
+
+  for (const relativePath of invalidPaths) {
+    const absolutePath = path.join(f.rootDir, ...relativePath.split('/'));
+    await mkdir(path.dirname(absolutePath), { recursive: true });
+    await writeFile(absolutePath, f.assetBytes);
+    f.record.path = relativePath;
+    f.record.sha256 = digest(f.assetBytes);
+
+    const result = await validateManifest(f.manifest, { rootDir: f.rootDir });
+
+    assert.equal(result.valid, false, `validator accepted Windows-reserved path: ${relativePath}`);
+    assert.ok(
+      result.errors.some((message) => message.includes('Windows-reserved device name')),
+      `validator did not explain the Windows-reserved path: ${relativePath}`
+    );
+  }
+});
