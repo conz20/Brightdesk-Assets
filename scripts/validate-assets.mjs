@@ -37,6 +37,11 @@ function isAbsoluteHttpsUrl(value) {
   }
 }
 
+function isWindowsReservedDeviceName(component) {
+  const stem = component.split('.')[0].replace(/[ .]+$/g, '').toUpperCase();
+  return /^(?:CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])$/.test(stem);
+}
+
 function contentMatches(filePath, bytes) {
   switch (path.posix.extname(filePath).toLowerCase()) {
     case '.png': return bytes.length >= 8 && bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
@@ -67,6 +72,9 @@ async function safeFile(rootDir, relativePath, openAsset = open) {
   }
   const parts = relativePath.split('/');
   if (parts.some((part) => !part || part === '.' || part === '..')) return { error: 'unsafe relative path' };
+  if (parts.some(isWindowsReservedDeviceName)) {
+    return { error: 'Windows-reserved device name is not allowed in asset path: ' + relativePath };
+  }
 
   const root = await realpath(rootDir);
   const candidate = path.resolve(root, ...parts);

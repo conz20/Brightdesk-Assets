@@ -5,94 +5,333 @@
   "description": "Metadata contract for original and explicitly cleared visual assets. Runtime validation also verifies file containment, regular-file status and SHA-256 values.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "assets"],
+  "required": [
+    "schemaVersion",
+    "assets"
+  ],
   "properties": {
-    "schemaVersion": { "const": 1 },
-    "assets": { "type": "array", "items": { "$ref": "#/$defs/asset" } }
+    "schemaVersion": {
+      "const": 1
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/asset"
+      }
+    }
   },
   "$defs": {
-    "sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
-    "relativePath": { "type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(/|$))(?!.*\\\\)(?!.*//)[A-Za-z0-9][A-Za-z0-9._/-]*$" },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(/|$))(?!.*\\\\)(?!.*//)(?!.*(?:^|/)(?:[Cc][Oo][Nn]|[Pp][Rr][Nn]|[Aa][Uu][Xx]|[Nn][Uu][Ll]|[Cc][Oo][Mm][1-9]|[Ll][Pp][Tt][1-9])(?:\\.[^/]*)?(?:/|$))[A-Za-z0-9][A-Za-z0-9._/-]*$"
+    },
     "asset": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "path", "kind", "classification", "description", "altText", "products", "source", "rights", "sha256"],
+      "required": [
+        "id",
+        "path",
+        "kind",
+        "classification",
+        "description",
+        "altText",
+        "products",
+        "source",
+        "rights",
+        "sha256"
+      ],
       "properties": {
-        "id": { "type": "string", "minLength": 1, "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
-        "path": { "$ref": "#/$defs/relativePath" },
-        "kind": { "enum": ["brand", "screenshot", "release-help", "illustration", "diagram", "marketing"] },
-        "classification": { "enum": ["verified-screenshot", "concept", "artwork", "reference"] },
-        "description": { "type": "string", "minLength": 1 },
-        "altText": { "type": "string", "minLength": 1 },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "path": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "kind": {
+          "enum": [
+            "brand",
+            "screenshot",
+            "release-help",
+            "illustration",
+            "diagram",
+            "marketing"
+          ]
+        },
+        "classification": {
+          "enum": [
+            "verified-screenshot",
+            "concept",
+            "artwork",
+            "reference"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "altText": {
+          "type": "string",
+          "minLength": 1
+        },
         "products": {
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
-          "items": { "enum": ["suite", "pages", "sheets", "decks", "notes", "database", "forms", "lists", "planner", "todo", "workspace"] }
+          "items": {
+            "enum": [
+              "suite",
+              "pages",
+              "sheets",
+              "decks",
+              "notes",
+              "database",
+              "forms",
+              "lists",
+              "planner",
+              "todo",
+              "workspace"
+            ]
+          }
         },
         "source": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["type", "creator", "reference"],
+          "required": [
+            "type",
+            "creator",
+            "reference"
+          ],
           "properties": {
-            "type": { "enum": ["original", "third-party", "generated"] },
-            "creator": { "type": "string", "minLength": 1 },
-            "reference": { "type": "string", "minLength": 1 }
+            "type": {
+              "enum": [
+                "original",
+                "third-party",
+                "generated"
+              ]
+            },
+            "creator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reference": {
+              "type": "string",
+              "minLength": 1
+            }
           },
           "allOf": [
             {
-              "if": { "properties": { "type": { "const": "third-party" } }, "required": ["type"] },
-              "then": { "properties": { "reference": { "type": "string", "format": "uri", "pattern": "^https://" } } }
+              "if": {
+                "properties": {
+                  "type": {
+                    "const": "third-party"
+                  }
+                },
+                "required": [
+                  "type"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "reference": {
+                    "type": "string",
+                    "format": "uri",
+                    "pattern": "^https://"
+                  }
+                }
+              }
             }
           ]
         },
         "rights": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["name", "evidencePath", "evidenceSha256", "redistribution", "bundleAllowed", "attributionRequired"],
+          "required": [
+            "name",
+            "evidencePath",
+            "evidenceSha256",
+            "redistribution",
+            "bundleAllowed",
+            "attributionRequired"
+          ],
           "properties": {
-            "name": { "type": "string", "minLength": 1 },
-            "evidencePath": { "$ref": "#/$defs/relativePath" },
-            "evidenceSha256": { "$ref": "#/$defs/sha256" },
-            "redistribution": { "const": "approved" },
-            "bundleAllowed": { "const": true },
-            "attributionRequired": { "type": "boolean" },
-            "attributionText": { "type": "string" }
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidencePath": {
+              "$ref": "#/$defs/relativePath"
+            },
+            "evidenceSha256": {
+              "$ref": "#/$defs/sha256"
+            },
+            "redistribution": {
+              "const": "approved"
+            },
+            "bundleAllowed": {
+              "const": true
+            },
+            "attributionRequired": {
+              "type": "boolean"
+            },
+            "attributionText": {
+              "type": "string"
+            }
           },
           "allOf": [
             {
-              "if": { "properties": { "attributionRequired": { "const": true } }, "required": ["attributionRequired"] },
-              "then": { "required": ["attributionText"], "properties": { "attributionText": { "type": "string", "minLength": 1 } } }
+              "if": {
+                "properties": {
+                  "attributionRequired": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "attributionRequired"
+                ]
+              },
+              "then": {
+                "required": [
+                  "attributionText"
+                ],
+                "properties": {
+                  "attributionText": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
             }
           ]
         },
-        "sha256": { "$ref": "#/$defs/sha256" },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
         "verification": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["product", "platform", "appVersion", "sourceCommit", "testedWorkflow", "workflowUrl"],
+          "required": [
+            "product",
+            "platform",
+            "appVersion",
+            "sourceCommit",
+            "testedWorkflow",
+            "workflowUrl"
+          ],
           "properties": {
-            "product": { "enum": ["suite", "pages", "sheets", "decks", "notes", "database", "forms", "lists", "planner", "todo", "workspace"] },
-            "platform": { "enum": ["windows-x64", "macos-arm64", "macos-x64", "linux-x64", "linux-arm64"] },
-            "appVersion": { "type": "string", "minLength": 1 },
-            "sourceCommit": { "type": "string", "pattern": "^(?:[a-fA-F0-9]{40}|[a-fA-F0-9]{64})$" },
-            "testedWorkflow": { "type": "string", "minLength": 1 },
-            "workflowUrl": { "type": "string", "format": "uri", "pattern": "^https://" }
+            "product": {
+              "enum": [
+                "suite",
+                "pages",
+                "sheets",
+                "decks",
+                "notes",
+                "database",
+                "forms",
+                "lists",
+                "planner",
+                "todo",
+                "workspace"
+              ]
+            },
+            "platform": {
+              "enum": [
+                "windows-x64",
+                "macos-arm64",
+                "macos-x64",
+                "linux-x64",
+                "linux-arm64"
+              ]
+            },
+            "appVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sourceCommit": {
+              "type": "string",
+              "pattern": "^(?:[a-fA-F0-9]{40}|[a-fA-F0-9]{64})$"
+            },
+            "testedWorkflow": {
+              "type": "string",
+              "minLength": 1
+            },
+            "workflowUrl": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://"
+            }
           }
         }
       },
       "allOf": [
         {
-          "if": { "properties": { "classification": { "const": "verified-screenshot" } }, "required": ["classification"] },
-          "then": { "required": ["verification"], "properties": { "kind": { "const": "screenshot" } } }
+          "if": {
+            "properties": {
+              "classification": {
+                "const": "verified-screenshot"
+              }
+            },
+            "required": [
+              "classification"
+            ]
+          },
+          "then": {
+            "required": [
+              "verification"
+            ],
+            "properties": {
+              "kind": {
+                "const": "screenshot"
+              }
+            }
+          }
         },
         {
-          "if": { "properties": { "classification": { "const": "concept" } }, "required": ["classification"] },
-          "then": { "not": { "required": ["verification"] } }
+          "if": {
+            "properties": {
+              "classification": {
+                "const": "concept"
+              }
+            },
+            "required": [
+              "classification"
+            ]
+          },
+          "then": {
+            "not": {
+              "required": [
+                "verification"
+              ]
+            }
+          }
         },
         {
-          "if": { "properties": { "kind": { "const": "screenshot" } }, "required": ["kind"] },
-          "then": { "properties": { "classification": { "enum": ["verified-screenshot", "concept"] } } }
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "screenshot"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "classification": {
+                "enum": [
+                  "verified-screenshot",
+                  "concept"
+                ]
+              }
+            }
+          }
         }
       ]
     }
