@@ -6,7 +6,7 @@ A governed registry for original Brightdesk visual assets, product screenshots, 
 
 ## Current status
 
-Asset registry and rights-evidence validation are under development on the existing draft pull request.
+Asset registry and rights-evidence validation are under development on the existing draft pull request. The portfolio-wide README and visual audit is recorded in [README visual audit — 12 November 2026](docs/README_VISUAL_AUDIT_2026-11-12.md).
 
 ## Immediate engineering goals
 
@@ -14,7 +14,7 @@ Implement a versioned asset manifest, schema validation, distinct rights evidenc
 
 ## Scope and safety boundaries
 
-Use original Brightdesk assets only. Do not copy third-party logos, proprietary artwork, fonts, or trade dress.
+Use original Brightdesk assets only. Do not copy third-party logos, proprietary artwork, fonts, or trade dress. Microsoft Fluent guidance is a quality reference, not an asset or branding source. Do not use Adobe applications, services, integrations, or assets.
 
 ## Supported development platforms
 
