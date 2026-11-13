@@ -362,7 +362,13 @@ test('rejects Windows-reserved device names in every asset path component', asyn
     'assets/AUX.svg',
     'assets/COM1.svg',
     'assets/LPT9.svg',
-    'CON/assets.svg'
+    'assets/COM¹.svg',
+    'assets/COM².svg',
+    'assets/COM³.svg',
+    'assets/LPT¹.svg',
+    'assets/LPT².svg',
+    'assets/LPT³.svg',
+    'COM¹/assets.svg'
   ];
 
   for (const relativePath of invalidPaths) {
@@ -394,7 +400,13 @@ test('JSON Schema rejects Windows-reserved device names in every asset path comp
     'assets/AUX.svg',
     'assets/COM1.svg',
     'assets/LPT9.svg',
-    'CON/assets.svg'
+    'assets/COM¹.svg',
+    'assets/COM².svg',
+    'assets/COM³.svg',
+    'assets/LPT¹.svg',
+    'assets/LPT².svg',
+    'assets/LPT³.svg',
+    'COM¹/assets.svg'
   ];
 
   for (const relativePath of invalidPaths) {
