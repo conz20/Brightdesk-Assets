@@ -39,7 +39,7 @@ function isAbsoluteHttpsUrl(value) {
 
 function isWindowsReservedDeviceName(component) {
   const stem = component.split('.')[0].replace(/[ .]+$/g, '').toUpperCase();
-  return /^(?:CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])$/.test(stem);
+  return /^(?:CON|PRN|AUX|NUL|COM[1-9¹²³]|LPT[1-9¹²³])$/.test(stem);
 }
 
 function contentMatches(filePath, bytes) {
@@ -67,7 +67,7 @@ function contentMatches(filePath, bytes) {
 }
 
 async function safeFile(rootDir, relativePath, openAsset = open) {
-  if (!nonEmpty(relativePath) || !/^[A-Za-z0-9][A-Za-z0-9._/-]*$/.test(relativePath) || path.posix.isAbsolute(relativePath)) {
+  if (!nonEmpty(relativePath) || !/^[A-Za-z0-9¹²³][A-Za-z0-9¹²³._/-]*$/.test(relativePath) || path.posix.isAbsolute(relativePath)) {
     return { error: 'unsafe relative path' };
   }
   const parts = relativePath.split('/');
