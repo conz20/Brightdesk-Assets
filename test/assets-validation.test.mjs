@@ -413,3 +413,30 @@ test('JSON Schema rejects Windows-reserved device names in every asset path comp
     assert.equal(pathPattern.test(relativePath), false, `schema accepted Windows-reserved path: ${relativePath}`);
   }
 });
+
+
+test('rejects Windows paths with a directory component ending in a period', async (t) => {
+  const f = await fixture(t);
+  const relativePath = 'assets./logo.svg';
+  await mkdir(path.join(f.rootDir, 'assets.'), { recursive: true });
+  await writeFile(path.join(f.rootDir, 'assets.', 'logo.svg'), f.assetBytes);
+  f.record.path = relativePath;
+  f.record.sha256 = digest(f.assetBytes);
+
+  const result = await validateManifest(f.manifest, { rootDir: f.rootDir });
+
+  assert.equal(result.valid, false, 'validator accepted a path Windows normalises');
+  assert.ok(
+    result.errors.some((message) => message.includes('Windows-nonportable path component')),
+    'validator did not explain the trailing-period path component'
+  );
+});
+
+test('JSON Schema rejects path components ending in a period or space', async () => {
+  const schema = JSON.parse(await readFile(new URL('../schemas/asset-manifest.schema.json', import.meta.url), 'utf8'));
+  const pathPattern = new RegExp(schema.$defs.relativePath.pattern);
+
+  for (const relativePath of ['assets./logo.svg', 'assets/child./logo.svg', 'assets /logo.svg']) {
+    assert.equal(pathPattern.test(relativePath), false, 'schema accepted non-portable path: ' + relativePath);
+  }
+});
