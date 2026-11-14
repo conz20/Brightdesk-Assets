@@ -1,10 +1,91 @@
 # Brightdesk Assets
 
+<p align="center"><img src="assets/branding/brightdesk-logo.svg" alt="Original Brightdesk Office Suite wordmark" width="360"></p>
+
 **The shared, offline-first library for Brightdesk identity, product artwork, help diagrams and verified release imagery.**
 
 This repository supports Brightdesk Suite and its ten approved customer products. It is engineering infrastructure, not a customer product, runtime asset server or CDN. Product builds must bundle approved files locally.
 
-**Browse every image:** [Open the complete SVG asset gallery](ASSET-GALLERY.md) for clickable previews and direct links to all **48 SVG files**.
+**See the artwork below:** the README now displays all ten product workspace previews and application icons. [Open the complete SVG asset gallery](ASSET-GALLERY.md) to browse all **48 SVG files**, including social banners and documentation diagrams.
+
+## The ten product artwork previews
+
+These are the actual source-owned SVG preview files copied unchanged from the product repositories. They are useful for reviewing the intended visual direction and artwork currently held in this library. **They are not screenshots of running applications and do not prove that the pictured interface or features are implemented.** Select any large preview to open its original SVG.
+
+<table>
+<tbody>
+<tr>
+<td align="center" valign="top" width="50%">
+<h3>Pages</h3>
+<a href="assets/product-previews/pages.svg"><img src="assets/product-previews/pages.svg" alt="Brightdesk Pages workspace artwork preview, not a screenshot of running software" width="420"></a>
+<p><img src="assets/product-icons/pages.svg" alt="Brightdesk Pages application icon" width="52"></p>
+<p><a href="assets/product-previews/pages.svg">Open workspace preview</a> · <a href="assets/product-icons/pages.svg">Open product icon</a></p>
+</td>
+<td align="center" valign="top" width="50%">
+<h3>Sheets</h3>
+<a href="assets/product-previews/sheets.svg"><img src="assets/product-previews/sheets.svg" alt="Brightdesk Sheets workspace artwork preview, not a screenshot of running software" width="420"></a>
+<p><img src="assets/product-icons/sheets.svg" alt="Brightdesk Sheets application icon" width="52"></p>
+<p><a href="assets/product-previews/sheets.svg">Open workspace preview</a> · <a href="assets/product-icons/sheets.svg">Open product icon</a></p>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<h3>Decks</h3>
+<a href="assets/product-previews/decks.svg"><img src="assets/product-previews/decks.svg" alt="Brightdesk Decks workspace artwork preview, not a screenshot of running software" width="420"></a>
+<p><img src="assets/product-icons/decks.svg" alt="Brightdesk Decks application icon" width="52"></p>
+<p><a href="assets/product-previews/decks.svg">Open workspace preview</a> · <a href="assets/product-icons/decks.svg">Open product icon</a></p>
+</td>
+<td align="center" valign="top" width="50%">
+<h3>Notes</h3>
+<a href="assets/product-previews/notes.svg"><img src="assets/product-previews/notes.svg" alt="Brightdesk Notes workspace artwork preview, not a screenshot of running software" width="420"></a>
+<p><img src="assets/product-icons/notes.svg" alt="Brightdesk Notes application icon" width="52"></p>
+<p><a href="assets/product-previews/notes.svg">Open workspace preview</a> · <a href="assets/product-icons/notes.svg">Open product icon</a></p>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<h3>Database</h3>
+<a href="assets/product-previews/database.svg"><img src="assets/product-previews/database.svg" alt="Brightdesk Database workspace artwork preview, not a screenshot of running software" width="420"></a>
+<p><img src="assets/product-icons/database.svg" alt="Brightdesk Database application icon" width="52"></p>
+<p><a href="assets/product-previews/database.svg">Open workspace preview</a> · <a href="assets/product-icons/database.svg">Open product icon</a></p>
+</td>
+<td align="center" valign="top" width="50%">
+<h3>Forms</h3>
+<a href="assets/product-previews/forms.svg"><img src="assets/product-previews/forms.svg" alt="Brightdesk Forms workspace artwork preview, not a screenshot of running software" width="420"></a>
+<p><img src="assets/product-icons/forms.svg" alt="Brightdesk Forms application icon" width="52"></p>
+<p><a href="assets/product-previews/forms.svg">Open workspace preview</a> · <a href="assets/product-icons/forms.svg">Open product icon</a></p>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<h3>Lists</h3>
+<a href="assets/product-previews/lists.svg"><img src="assets/product-previews/lists.svg" alt="Brightdesk Lists workspace artwork preview, not a screenshot of running software" width="420"></a>
+<p><img src="assets/product-icons/lists.svg" alt="Brightdesk Lists application icon" width="52"></p>
+<p><a href="assets/product-previews/lists.svg">Open workspace preview</a> · <a href="assets/product-icons/lists.svg">Open product icon</a></p>
+</td>
+<td align="center" valign="top" width="50%">
+<h3>Planner</h3>
+<a href="assets/product-previews/planner.svg"><img src="assets/product-previews/planner.svg" alt="Brightdesk Planner workspace artwork preview, not a screenshot of running software" width="420"></a>
+<p><img src="assets/product-icons/planner.svg" alt="Brightdesk Planner application icon" width="52"></p>
+<p><a href="assets/product-previews/planner.svg">Open workspace preview</a> · <a href="assets/product-icons/planner.svg">Open product icon</a></p>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<h3>To Do</h3>
+<a href="assets/product-previews/todo.svg"><img src="assets/product-previews/todo.svg" alt="Brightdesk To Do workspace artwork preview, not a screenshot of running software" width="420"></a>
+<p><img src="assets/product-icons/todo.svg" alt="Brightdesk To Do application icon" width="52"></p>
+<p><a href="assets/product-previews/todo.svg">Open workspace preview</a> · <a href="assets/product-icons/todo.svg">Open product icon</a></p>
+</td>
+<td align="center" valign="top" width="50%">
+<h3>Workspace</h3>
+<a href="assets/product-previews/workspace.svg"><img src="assets/product-previews/workspace.svg" alt="Brightdesk Workspace workspace artwork preview, not a screenshot of running software" width="420"></a>
+<p><img src="assets/product-icons/workspace.svg" alt="Brightdesk Workspace application icon" width="52"></p>
+<p><a href="assets/product-previews/workspace.svg">Open workspace preview</a> · <a href="assets/product-icons/workspace.svg">Open product icon</a></p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ## What is in the library
 
@@ -25,7 +106,7 @@ The [source asset catalog](docs/source-asset-catalog.md) records each mirrored i
 
 ## Screenshot status
 
-The screenshot coverage plan includes Brightdesk Suite and the ten approved products across Windows, macOS and Linux. All 33 product/platform targets remain planned until captured.
+**No verified application screenshots are available yet.** The screenshot coverage plan includes Brightdesk Suite and the ten approved products across Windows, macOS and Linux. All 33 product/platform targets remain planned until captured.
 
 A product preview, illustration, mock-up or social banner is **not** a genuine application screenshot. A verified screenshot must be captured from the actual running product build and recorded with the product, platform, app version, exact source commit, tested workflow and matching successful workflow evidence.
 
