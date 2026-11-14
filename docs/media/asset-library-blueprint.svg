@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Brightdesk Assets library blueprint</title>
+  <desc id="desc">A planning diagram showing the intended categories in the Brightdesk offline visual asset library and its approval process. It is not an application screenshot or an approved asset catalogue.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10182C"/><stop offset="1" stop-color="#1B2944"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#80D7C3"/><stop offset="1" stop-color="#8CB7FF"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#263653"/><stop offset="1" stop-color="#202E49"/></linearGradient>
+  </defs>
+  <rect width="1440" height="900" rx="34" fill="url(#bg)"/>
+  <circle cx="1310" cy="80" r="220" fill="#426A9A" opacity=".12"/>
+  <circle cx="95" cy="850" r="250" fill="#43B69F" opacity=".08"/>
+  <text x="76" y="78" fill="#A8C7E8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3">BRIGHTDESK  /  SHARED ENGINEERING LIBRARY</text>
+  <text x="76" y="145" fill="#F5F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="54" font-weight="750">Brightdesk visual library</text>
+  <text x="78" y="184" fill="#C1CEE1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22">One governed source for original artwork, real product captures and supporting media.</text>
+  <rect x="1110" y="94" width="250" height="42" rx="21" fill="#3A4C68" stroke="#6B829F"/>
+  <text x="1235" y="121" text-anchor="middle" fill="#F5DCA1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">COLLECTION BLUEPRINT</text>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="72" y="232" width="408" height="174" rx="22" fill="url(#panel)" stroke="#405574"/>
+    <circle cx="118" cy="282" r="25" fill="#2E706F"/><path d="M108 283h20M118 273v20" stroke="#B7F3E4" stroke-width="3" stroke-linecap="round"/>
+    <text x="158" y="278" fill="#F4F7FC" font-size="25" font-weight="700">Brand and identity</text>
+    <text x="104" y="332" fill="#C6D2E4" font-size="18">Original Brightdesk marks, product icons,</text>
+    <text x="104" y="360" fill="#C6D2E4" font-size="18">approved illustrations and brand artwork.</text>
+
+    <rect x="516" y="232" width="408" height="174" rx="22" fill="url(#panel)" stroke="#405574"/>
+    <circle cx="562" cy="282" r="25" fill="#3A588A"/><rect x="549" y="270" width="26" height="23" rx="4" fill="none" stroke="#C9DAFF" stroke-width="2.5"/><path d="M549 277h26" stroke="#C9DAFF" stroke-width="2.5"/>
+    <text x="602" y="278" fill="#F4F7FC" font-size="25" font-weight="700">Product screenshots</text>
+    <text x="548" y="332" fill="#C6D2E4" font-size="18">Genuine captures from tested Suite and</text>
+    <text x="548" y="360" fill="#C6D2E4" font-size="18">product builds, with exact build evidence.</text>
+
+    <rect x="960" y="232" width="408" height="174" rx="22" fill="url(#panel)" stroke="#405574"/>
+    <circle cx="1006" cy="282" r="25" fill="#785D37"/><path d="M994 273h24v18h-24zM999 268h14" fill="none" stroke="#FFE0A6" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="1046" y="278" fill="#F4F7FC" font-size="25" font-weight="700">Help and release media</text>
+    <text x="992" y="332" fill="#C6D2E4" font-size="18">Setup guidance, update instructions,</text>
+    <text x="992" y="360" fill="#C6D2E4" font-size="18">release notes and support illustrations.</text>
+
+    <rect x="72" y="430" width="408" height="174" rx="22" fill="url(#panel)" stroke="#405574"/>
+    <circle cx="118" cy="480" r="25" fill="#654F88"/><path d="M106 489l10-10 7 7 8-13" fill="none" stroke="#E2D5FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="158" y="476" fill="#F4F7FC" font-size="25" font-weight="700">Diagrams and concepts</text>
+    <text x="104" y="530" fill="#C6D2E4" font-size="18">Architecture, workflow and explanatory</text>
+    <text x="104" y="558" fill="#C6D2E4" font-size="18">visuals, clearly labelled as concepts.</text>
+
+    <rect x="516" y="430" width="408" height="174" rx="22" fill="url(#panel)" stroke="#405574"/>
+    <circle cx="562" cy="480" r="25" fill="#386B58"/><path d="M553 470h18v21h-18zM557 476h10M557 482h10M557 488h7" fill="none" stroke="#C8F5DD" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="602" y="476" fill="#F4F7FC" font-size="25" font-weight="700">Rights and provenance</text>
+    <text x="548" y="530" fill="#C6D2E4" font-size="18">Source records, permission evidence,</text>
+    <text x="548" y="558" fill="#C6D2E4" font-size="18">attribution and integrity hashes.</text>
+
+    <rect x="960" y="430" width="408" height="174" rx="22" fill="url(#panel)" stroke="#405574"/>
+    <circle cx="1006" cy="480" r="25" fill="#376B83"/><path d="M994 481l8 8 17-19" fill="none" stroke="#C8EDFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1046" y="476" fill="#F4F7FC" font-size="25" font-weight="700">Offline packaging</text>
+    <text x="992" y="530" fill="#C6D2E4" font-size="18">Approved files bundled with customer</text>
+    <text x="992" y="558" fill="#C6D2E4" font-size="18">builds; no CDN or runtime fetching.</text>
+  </g>
+
+  <text x="76" y="654" fill="#A8C7E8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="2">HOW AN ASSET BECOMES APPROVED</text>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="72" y="680" width="276" height="76" rx="16" fill="#263B56" stroke="#52708C"/>
+    <text x="210" y="710" text-anchor="middle" fill="#F3F7FD" font-size="18" font-weight="700">Source + rights</text>
+    <text x="210" y="735" text-anchor="middle" fill="#BFCDE0" font-size="14">creator and permission proof</text>
+    <path d="M357 718h35m-9-8 9 8-9 8" stroke="url(#accent)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="402" y="680" width="276" height="76" rx="16" fill="#263B56" stroke="#52708C"/>
+    <text x="540" y="710" text-anchor="middle" fill="#F3F7FD" font-size="18" font-weight="700">Review</text>
+    <text x="540" y="735" text-anchor="middle" fill="#BFCDE0" font-size="14">purpose, quality and rights</text>
+    <path d="M687 718h35m-9-8 9 8-9 8" stroke="url(#accent)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="732" y="680" width="276" height="76" rx="16" fill="#263B56" stroke="#52708C"/>
+    <text x="870" y="710" text-anchor="middle" fill="#F3F7FD" font-size="18" font-weight="700">Manifest + hash</text>
+    <text x="870" y="735" text-anchor="middle" fill="#BFCDE0" font-size="14">metadata and integrity check</text>
+    <path d="M1017 718h35m-9-8 9 8-9 8" stroke="url(#accent)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="1062" y="680" width="306" height="76" rx="16" fill="#244D4E" stroke="#65AFA1"/>
+    <text x="1215" y="710" text-anchor="middle" fill="#F3F7FD" font-size="18" font-weight="700">Bundle locally</text>
+    <text x="1215" y="735" text-anchor="middle" fill="#C5EDE3" font-size="14">works offline in each product</text>
+  </g>
+
+  <text x="76" y="810" fill="#A8C7E8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.7">CUSTOMER PORTFOLIO</text>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="600" text-anchor="middle">
+    <rect x="290" y="786" width="84" height="38" rx="19" fill="#314560"/><text x="332" y="811" fill="#F3F7FD">Suite</text>
+    <rect x="384" y="786" width="92" height="38" rx="19" fill="#314560"/><text x="430" y="811" fill="#F3F7FD">Pages</text>
+    <rect x="486" y="786" width="96" height="38" rx="19" fill="#314560"/><text x="534" y="811" fill="#F3F7FD">Sheets</text>
+    <rect x="592" y="786" width="88" height="38" rx="19" fill="#314560"/><text x="636" y="811" fill="#F3F7FD">Decks</text>
+    <rect x="690" y="786" width="88" height="38" rx="19" fill="#314560"/><text x="734" y="811" fill="#F3F7FD">Notes</text>
+    <rect x="788" y="786" width="112" height="38" rx="19" fill="#314560"/><text x="844" y="811" fill="#F3F7FD">Database</text>
+    <rect x="910" y="786" width="82" height="38" rx="19" fill="#314560"/><text x="951" y="811" fill="#F3F7FD">Forms</text>
+    <rect x="1002" y="786" width="82" height="38" rx="19" fill="#314560"/><text x="1043" y="811" fill="#F3F7FD">Lists</text>
+    <rect x="1094" y="786" width="102" height="38" rx="19" fill="#314560"/><text x="1145" y="811" fill="#F3F7FD">Planner</text>
+    <rect x="1206" y="786" width="78" height="38" rx="19" fill="#314560"/><text x="1245" y="811" fill="#F3F7FD">To Do</text>
+    <rect x="1294" y="786" width="74" height="38" rx="19" fill="#314560"/><text x="1331" y="811" fill="#F3F7FD">Workspace</text>
+  </g>
+  <text x="1368" y="866" text-anchor="end" fill="#8FA3BE" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Planning diagram only · not a screenshot · not an approved asset catalogue</text>
+</svg>
