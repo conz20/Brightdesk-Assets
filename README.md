@@ -87,3 +87,22 @@ Use Node.js **24.22.2**. No runtime dependencies are required.
 npm test
 npm run validate
 ```
+
+## Original product concept illustrations
+
+An initial set of ten original, editable SVG illustrations is now included—one for each approved customer product. These are **concept artwork**, not screenshots or proof of implemented features. Browse the [complete illustration library](assets/concepts/product-illustrations/) and its [usage guide](assets/concepts/README.md).
+
+| Product | Original concept illustration |
+| --- | --- |
+| **Pages** | <img src="assets/concepts/product-illustrations/pages.svg" alt="Pages original concept artwork, not a product screenshot" width="320"> |
+| **Sheets** | <img src="assets/concepts/product-illustrations/sheets.svg" alt="Sheets original concept artwork, not a product screenshot" width="320"> |
+| **Decks** | <img src="assets/concepts/product-illustrations/decks.svg" alt="Decks original concept artwork, not a product screenshot" width="320"> |
+| **Notes** | <img src="assets/concepts/product-illustrations/notes.svg" alt="Notes original concept artwork, not a product screenshot" width="320"> |
+| **Database** | <img src="assets/concepts/product-illustrations/database.svg" alt="Database original concept artwork, not a product screenshot" width="320"> |
+| **Forms** | <img src="assets/concepts/product-illustrations/forms.svg" alt="Forms original concept artwork, not a product screenshot" width="320"> |
+| **Lists** | <img src="assets/concepts/product-illustrations/lists.svg" alt="Lists original concept artwork, not a product screenshot" width="320"> |
+| **Planner** | <img src="assets/concepts/product-illustrations/planner.svg" alt="Planner original concept artwork, not a product screenshot" width="320"> |
+| **To Do** | <img src="assets/concepts/product-illustrations/todo.svg" alt="To Do original concept artwork, not a product screenshot" width="320"> |
+| **Workspace** | <img src="assets/concepts/product-illustrations/workspace.svg" alt="Workspace original concept artwork, not a product screenshot" width="320"> |
+
+The screenshot capture plan remains separate. Genuine product screenshots will be added only when captured from actual running builds and matched to workflow evidence. Concept artwork is not included in the approved distributable manifest.
