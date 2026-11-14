@@ -81,6 +81,8 @@ Customer products must bundle approved assets locally. Do not add runtime networ
 
 Use Node.js **24.22.2**. No runtime dependencies are required.
 
+
+`npm test` also checks that every documentation SVG has an accessible title and description, balanced XML elements, and no external image or script dependency.
 ```sh
 npm test
 npm run validate
