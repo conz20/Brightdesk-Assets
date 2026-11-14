@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
-<title id="title">Brightdesk Lists product icon concept</title>
-<desc id="desc">Original Lists icon concept in the shared Brightdesk visual language. Concept artwork only, not an approved final product icon.</desc>
-<rect x="10" y="10" width="236" height="236" rx="48" fill="#F3F6FA" stroke="#DCE4ED" stroke-width="3"/>
-<circle cx="199" cy="55" r="29" fill="#4D8C73" opacity=".13"/>
-<circle cx="54" cy="204" r="20" fill="#4D8C73" opacity=".10"/>
-<g><rect x="62" y="58" width="132" height="142" rx="14" fill="#fff" stroke="#26384d" stroke-width="9"/><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M85 98l8 8 14-17M85 137l8 8 14-17M85 176l8 8 14-17" stroke="#4D8C73" stroke-width="8"/><path d="M126 99h45M126 138h45M126 177h45" stroke="#26384d" stroke-width="8"/></g></g>
-<rect x="18" y="18" width="220" height="220" rx="42" fill="none" stroke="#4D8C73" stroke-width="4" opacity=".45"/>
-</svg>

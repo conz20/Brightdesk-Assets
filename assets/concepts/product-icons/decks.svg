@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
-<title id="title">Brightdesk Decks product icon concept</title>
-<desc id="desc">Original Decks icon concept in the shared Brightdesk visual language. Concept artwork only, not an approved final product icon.</desc>
-<rect x="10" y="10" width="236" height="236" rx="48" fill="#F3F6FA" stroke="#DCE4ED" stroke-width="3"/>
-<circle cx="199" cy="55" r="29" fill="#8A62D6" opacity=".13"/>
-<circle cx="54" cy="204" r="20" fill="#8A62D6" opacity=".10"/>
-<g><rect x="61" y="72" width="133" height="108" rx="12" fill="#fff" stroke="#26384d" stroke-width="9"/><path d="M82 98h61" stroke="#8A62D6" stroke-width="9" stroke-linecap="round"/><path d="M82 121h48" stroke="#26384d" stroke-width="7" stroke-linecap="round" opacity=".55"/><path d="M146 141l29 18-29 18z" fill="#8A62D6" stroke="#26384d" stroke-width="6" stroke-linejoin="round"/></g>
-<rect x="18" y="18" width="220" height="220" rx="42" fill="none" stroke="#8A62D6" stroke-width="4" opacity=".45"/>
-</svg>

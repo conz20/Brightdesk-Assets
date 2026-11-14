@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
-<title id="title">Brightdesk Sheets product icon concept</title>
-<desc id="desc">Original Sheets icon concept in the shared Brightdesk visual language. Concept artwork only, not an approved final product icon.</desc>
-<rect x="10" y="10" width="236" height="236" rx="48" fill="#F3F6FA" stroke="#DCE4ED" stroke-width="3"/>
-<circle cx="199" cy="55" r="29" fill="#26966E" opacity=".13"/>
-<circle cx="54" cy="204" r="20" fill="#26966E" opacity=".10"/>
-<g><rect x="67" y="61" width="122" height="134" rx="12" fill="#fff" stroke="#26384d" stroke-width="9"/><path d="M67 105h122M108 105v90M149 105v90" stroke="#26966E" stroke-width="8"/><path d="M82 174l20-20 20 8 28-34 23 10" fill="none" stroke="#26384d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></g>
-<rect x="18" y="18" width="220" height="220" rx="42" fill="none" stroke="#26966E" stroke-width="4" opacity=".45"/>
-</svg>

@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
-<title id="title">Brightdesk Pages product icon concept</title>
-<desc id="desc">Original Pages icon concept in the shared Brightdesk visual language. Concept artwork only, not an approved final product icon.</desc>
-<rect x="10" y="10" width="236" height="236" rx="48" fill="#F3F6FA" stroke="#DCE4ED" stroke-width="3"/>
-<circle cx="199" cy="55" r="29" fill="#397F9D" opacity=".13"/>
-<circle cx="54" cy="204" r="20" fill="#397F9D" opacity=".10"/>
-<g><path d="M91 54h54l34 34v112H91z" fill="#fff" stroke="#26384d" stroke-width="9" stroke-linejoin="round"/><path d="M145 54v36h34" fill="none" stroke="#26384d" stroke-width="9" stroke-linejoin="round"/><path d="M111 119h47M111 143h49M111 167h31" stroke="#397F9D" stroke-width="9" stroke-linecap="round"/></g>
-<rect x="18" y="18" width="220" height="220" rx="42" fill="none" stroke="#397F9D" stroke-width="4" opacity=".45"/>
-</svg>
