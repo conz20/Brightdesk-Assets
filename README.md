@@ -106,3 +106,23 @@ An initial set of ten original, editable SVG illustrations is now included—one
 | **Workspace** | <img src="assets/concepts/product-illustrations/workspace.svg" alt="Workspace original concept artwork, not a product screenshot" width="320"> |
 
 The screenshot capture plan remains separate. Genuine product screenshots will be added only when captured from actual running builds and matched to workflow evidence. Concept artwork is not included in the approved distributable manifest.
+
+
+## Original product icon concepts
+
+A second exploration set adds ten original, editable SVG icon concepts for the ten approved products. These are **concepts for design review**, not approved final product icons or screenshots. Each icon is documented in the [product icon concept guide](assets/concepts/product-icons/README.md).
+
+| Product | Icon concept |
+| --- | --- |
+| **Pages** | <img src="assets/concepts/product-icons/pages.svg" alt="Pages original icon concept, not an approved final icon" width="72"> |
+| **Sheets** | <img src="assets/concepts/product-icons/sheets.svg" alt="Sheets original icon concept, not an approved final icon" width="72"> |
+| **Decks** | <img src="assets/concepts/product-icons/decks.svg" alt="Decks original icon concept, not an approved final icon" width="72"> |
+| **Notes** | <img src="assets/concepts/product-icons/notes.svg" alt="Notes original icon concept, not an approved final icon" width="72"> |
+| **Database** | <img src="assets/concepts/product-icons/database.svg" alt="Database original icon concept, not an approved final icon" width="72"> |
+| **Forms** | <img src="assets/concepts/product-icons/forms.svg" alt="Forms original icon concept, not an approved final icon" width="72"> |
+| **Lists** | <img src="assets/concepts/product-icons/lists.svg" alt="Lists original icon concept, not an approved final icon" width="72"> |
+| **Planner** | <img src="assets/concepts/product-icons/planner.svg" alt="Planner original icon concept, not an approved final icon" width="72"> |
+| **To Do** | <img src="assets/concepts/product-icons/todo.svg" alt="To Do original icon concept, not an approved final icon" width="72"> |
+| **Workspace** | <img src="assets/concepts/product-icons/workspace.svg" alt="Workspace original icon concept, not an approved final icon" width="72"> |
+
+Keep these concepts out of customer builds and the approved asset manifest until design approval and full provenance, rights, redistribution, bundling and checksum records are complete.

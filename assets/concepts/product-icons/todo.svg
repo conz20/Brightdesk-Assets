@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">Brightdesk To Do product icon concept</title>
+<desc id="desc">Original To Do icon concept in the shared Brightdesk visual language. Concept artwork only, not an approved final product icon.</desc>
+<rect x="10" y="10" width="236" height="236" rx="48" fill="#F3F6FA" stroke="#DCE4ED" stroke-width="3"/>
+<circle cx="199" cy="55" r="29" fill="#26966E" opacity=".13"/>
+<circle cx="54" cy="204" r="20" fill="#26966E" opacity=".10"/>
+<g><circle cx="128" cy="128" r="68" fill="#fff" stroke="#26384d" stroke-width="9"/><circle cx="128" cy="128" r="49" fill="#e1f2eb"/><path d="M95 129l22 22 46-51" fill="none" stroke="#26966E" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="18" y="18" width="220" height="220" rx="42" fill="none" stroke="#26966E" stroke-width="4" opacity=".45"/>
+</svg>

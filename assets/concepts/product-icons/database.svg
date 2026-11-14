@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">Brightdesk Database product icon concept</title>
+<desc id="desc">Original Database icon concept in the shared Brightdesk visual language. Concept artwork only, not an approved final product icon.</desc>
+<rect x="10" y="10" width="236" height="236" rx="48" fill="#F3F6FA" stroke="#DCE4ED" stroke-width="3"/>
+<circle cx="199" cy="55" r="29" fill="#397F9D" opacity=".13"/>
+<circle cx="54" cy="204" r="20" fill="#397F9D" opacity=".10"/>
+<g><ellipse cx="128" cy="75" rx="61" ry="23" fill="#dcecf2" stroke="#26384d" stroke-width="9"/><path d="M67 75v98c0 13 27 24 61 24s61-11 61-24V75" fill="#fff" stroke="#26384d" stroke-width="9"/><path d="M67 109c0 13 27 24 61 24s61-11 61-24M67 145c0 13 27 24 61 24s61-11 61-24" fill="none" stroke="#397F9D" stroke-width="8"/></g>
+<rect x="18" y="18" width="220" height="220" rx="42" fill="none" stroke="#397F9D" stroke-width="4" opacity=".45"/>
+</svg>

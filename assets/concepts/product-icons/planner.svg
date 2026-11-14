@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">Brightdesk Planner product icon concept</title>
+<desc id="desc">Original Planner icon concept in the shared Brightdesk visual language. Concept artwork only, not an approved final product icon.</desc>
+<rect x="10" y="10" width="236" height="236" rx="48" fill="#F3F6FA" stroke="#DCE4ED" stroke-width="3"/>
+<circle cx="199" cy="55" r="29" fill="#4F79C8" opacity=".13"/>
+<circle cx="54" cy="204" r="20" fill="#4F79C8" opacity=".10"/>
+<g><rect x="61" y="67" width="134" height="127" rx="13" fill="#fff" stroke="#26384d" stroke-width="9"/><path d="M61 105h134" stroke="#4F79C8" stroke-width="10"/><path d="M93 53v27M163 53v27" stroke="#26384d" stroke-width="9" stroke-linecap="round"/><g fill="#dce6f7"><rect x="82" y="122" width="20" height="19" rx="4"/><rect x="118" y="122" width="20" height="19" rx="4"/><rect x="154" y="122" width="20" height="19" rx="4"/></g><rect x="82" y="154" width="20" height="19" rx="4" fill="#4F79C8"/><rect x="118" y="154" width="20" height="19" rx="4" fill="#dce6f7"/><rect x="154" y="154" width="20" height="19" rx="4" fill="#dce6f7"/></g>
+<rect x="18" y="18" width="220" height="220" rx="42" fill="none" stroke="#4F79C8" stroke-width="4" opacity=".45"/>
+</svg>
