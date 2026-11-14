@@ -60,3 +60,37 @@ test("README points to the 48-file gallery and distinguishes previews from scree
   assert.match(gallery, /not verified screenshots/i);
   assert.match(gallery, /Source-mirrored asset catalog/);
 });
+
+
+test("the root README visibly presents each approved product preview and icon", async () => {
+  const readme = await readFile(new URL("../README.md", import.meta.url), "utf8");
+
+  const productNames = {
+    pages: "Pages",
+    sheets: "Sheets",
+    decks: "Decks",
+    notes: "Notes",
+    database: "Database",
+    forms: "Forms",
+    lists: "Lists",
+    planner: "Planner",
+    todo: "To Do",
+    workspace: "Workspace",
+  };
+
+  for (const [slug, name] of Object.entries(productNames)) {
+    const previewImage = new RegExp(
+      `<img\\s+src="assets/product-previews/${slug}\\.svg"\\s+alt="Brightdesk ${name} workspace artwork preview, not a screenshot of running software"`,
+      "i",
+    );
+    const iconImage = new RegExp(
+      `<img\\s+src="assets/product-icons/${slug}\\.svg"\\s+alt="Brightdesk ${name} application icon"`,
+      "i",
+    );
+
+    assert.match(readme, previewImage, name + " workspace preview must be visibly embedded with an honest screenshot disclaimer");
+    assert.match(readme, iconImage, name + " application icon must be visibly embedded");
+    assert.ok(readme.includes(`href="assets/product-previews/${slug}.svg"`), name + " preview must link to its original SVG");
+    assert.ok(readme.includes(`href="assets/product-icons/${slug}.svg"`), name + " icon must link to its original SVG");
+  }
+});
