@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1030" viewBox="0 0 1440 1030" role="img" aria-labelledby="title desc">
+  <title id="title">Brightdesk product screenshot coverage plan</title>
+  <desc id="desc">A planned capture matrix for Brightdesk Suite and the ten products across Windows, macOS and Linux. Every platform is marked planned because no verified product screenshots are currently approved in this repository.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5F7FB"/><stop offset="1" stop-color="#E8EDF5"/></linearGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#17304B"/><stop offset="1" stop-color="#254A62"/></linearGradient>
+  </defs>
+  <rect width="1440" height="1030" rx="32" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1440" height="224" rx="32" fill="url(#top)"/>
+  <rect x="0" y="192" width="1440" height="32" fill="url(#top)"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="68" y="70" fill="#A9D9D0" font-size="16" font-weight="700" letter-spacing="2.6">BRIGHTDESK  /  SCREENSHOT ROADMAP</text>
+    <text x="68" y="132" fill="#FFFFFF" font-size="48" font-weight="750">Product screenshot coverage</text>
+    <text x="70" y="174" fill="#D5E1ED" font-size="20">The planned capture set for the Suite and ten approved products.</text>
+    <rect x="1110" y="54" width="258" height="44" rx="22" fill="#5B4C35" stroke="#E3C58C"/>
+    <text x="1239" y="82" text-anchor="middle" fill="#FFE5B5" font-size="14" font-weight="700" letter-spacing="1.2">PLANNED · NOT CAPTURED</text>
+  </g>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="68" y="248" width="392" height="86" rx="18" fill="#FFFFFF" stroke="#D8E0EB"/>
+    <text x="94" y="282" fill="#68788F" font-size="14" font-weight="700" letter-spacing="1.2">CUSTOMER TARGETS</text>
+    <text x="94" y="316" fill="#1A2B44" font-size="30" font-weight="750">11</text>
+    <text x="154" y="313" fill="#66758A" font-size="16">Suite + 10 products</text>
+
+    <rect x="478" y="248" width="392" height="86" rx="18" fill="#FFFFFF" stroke="#D8E0EB"/>
+    <text x="504" y="282" fill="#68788F" font-size="14" font-weight="700" letter-spacing="1.2">DESKTOP PLATFORMS</text>
+    <text x="504" y="316" fill="#1A2B44" font-size="30" font-weight="750">3</text>
+    <text x="544" y="313" fill="#66758A" font-size="16">Windows · macOS · Linux</text>
+
+    <rect x="888" y="248" width="480" height="86" rx="18" fill="#FFF9ED" stroke="#E6D2A9"/>
+    <text x="914" y="282" fill="#97733A" font-size="14" font-weight="700" letter-spacing="1.2">VERIFIED CAPTURES APPROVED HERE</text>
+    <text x="914" y="316" fill="#6D5226" font-size="30" font-weight="750">0</text>
+    <text x="954" y="313" fill="#8A7049" font-size="16">No product screenshot is claimed yet</text>
+  </g>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="68" y="360" width="875" height="58" rx="14" fill="#DCE5EF"/>
+    <text x="96" y="396" fill="#354963" font-size="16" font-weight="700">PRODUCT</text>
+    <text x="548" y="396" text-anchor="middle" fill="#354963" font-size="16" font-weight="700">WINDOWS</text>
+    <text x="718" y="396" text-anchor="middle" fill="#354963" font-size="16" font-weight="700">macOS</text>
+    <text x="875" y="396" text-anchor="middle" fill="#354963" font-size="16" font-weight="700">LINUX</text>
+
+    <g fill="#FFFFFF" stroke="#DFE5ED">
+      <rect x="68" y="430" width="875" height="43" rx="8"/>
+      <rect x="68" y="477" width="875" height="43" rx="8"/>
+      <rect x="68" y="524" width="875" height="43" rx="8"/>
+      <rect x="68" y="571" width="875" height="43" rx="8"/>
+      <rect x="68" y="618" width="875" height="43" rx="8"/>
+      <rect x="68" y="665" width="875" height="43" rx="8"/>
+      <rect x="68" y="712" width="875" height="43" rx="8"/>
+      <rect x="68" y="759" width="875" height="43" rx="8"/>
+      <rect x="68" y="806" width="875" height="43" rx="8"/>
+      <rect x="68" y="853" width="875" height="43" rx="8"/>
+      <rect x="68" y="900" width="875" height="43" rx="8"/>
+    </g>
+
+    <g fill="#1D2E46" font-size="16" font-weight="650">
+      <text x="96" y="458">Brightdesk Suite</text>
+      <text x="96" y="505">Pages</text>
+      <text x="96" y="552">Sheets</text>
+      <text x="96" y="599">Decks</text>
+      <text x="96" y="646">Notes</text>
+      <text x="96" y="693">Database</text>
+      <text x="96" y="740">Forms</text>
+      <text x="96" y="787">Lists</text>
+      <text x="96" y="834">Planner</text>
+      <text x="96" y="881">To Do</text>
+      <text x="96" y="928">Workspace</text>
+    </g>
+
+    <g font-size="13" font-weight="750" text-anchor="middle">
+      <g fill="#FFF4DD" stroke="#E6D1A3">
+        <rect x="490" y="438" width="116" height="27" rx="13.5"/><rect x="660" y="438" width="116" height="27" rx="13.5"/><rect x="817" y="438" width="116" height="27" rx="13.5"/>
+        <rect x="490" y="485" width="116" height="27" rx="13.5"/><rect x="660" y="485" width="116" height="27" rx="13.5"/><rect x="817" y="485" width="116" height="27" rx="13.5"/>
+        <rect x="490" y="532" width="116" height="27" rx="13.5"/><rect x="660" y="532" width="116" height="27" rx="13.5"/><rect x="817" y="532" width="116" height="27" rx="13.5"/>
+        <rect x="490" y="579" width="116" height="27" rx="13.5"/><rect x="660" y="579" width="116" height="27" rx="13.5"/><rect x="817" y="579" width="116" height="27" rx="13.5"/>
+        <rect x="490" y="626" width="116" height="27" rx="13.5"/><rect x="660" y="626" width="116" height="27" rx="13.5"/><rect x="817" y="626" width="116" height="27" rx="13.5"/>
+        <rect x="490" y="673" width="116" height="27" rx="13.5"/><rect x="660" y="673" width="116" height="27" rx="13.5"/><rect x="817" y="673" width="116" height="27" rx="13.5"/>
+        <rect x="490" y="720" width="116" height="27" rx="13.5"/><rect x="660" y="720" width="116" height="27" rx="13.5"/><rect x="817" y="720" width="116" height="27" rx="13.5"/>
+        <rect x="490" y="767" width="116" height="27" rx="13.5"/><rect x="660" y="767" width="116" height="27" rx="13.5"/><rect x="817" y="767" width="116" height="27" rx="13.5"/>
+        <rect x="490" y="814" width="116" height="27" rx="13.5"/><rect x="660" y="814" width="116" height="27" rx="13.5"/><rect x="817" y="814" width="116" height="27" rx="13.5"/>
+        <rect x="490" y="861" width="116" height="27" rx="13.5"/><rect x="660" y="861" width="116" height="27" rx="13.5"/><rect x="817" y="861" width="116" height="27" rx="13.5"/>
+        <rect x="490" y="908" width="116" height="27" rx="13.5"/><rect x="660" y="908" width="116" height="27" rx="13.5"/><rect x="817" y="908" width="116" height="27" rx="13.5"/>
+      </g>
+      <g fill="#88642F">
+        <text x="548" y="457">PLANNED</text><text x="718" y="457">PLANNED</text><text x="875" y="457">PLANNED</text>
+        <text x="548" y="504">PLANNED</text><text x="718" y="504">PLANNED</text><text x="875" y="504">PLANNED</text>
+        <text x="548" y="551">PLANNED</text><text x="718" y="551">PLANNED</text><text x="875" y="551">PLANNED</text>
+        <text x="548" y="598">PLANNED</text><text x="718" y="598">PLANNED</text><text x="875" y="598">PLANNED</text>
+        <text x="548" y="645">PLANNED</text><text x="718" y="645">PLANNED</text><text x="875" y="645">PLANNED</text>
+        <text x="548" y="692">PLANNED</text><text x="718" y="692">PLANNED</text><text x="875" y="692">PLANNED</text>
+        <text x="548" y="739">PLANNED</text><text x="718" y="739">PLANNED</text><text x="875" y="739">PLANNED</text>
+        <text x="548" y="786">PLANNED</text><text x="718" y="786">PLANNED</text><text x="875" y="786">PLANNED</text>
+        <text x="548" y="833">PLANNED</text><text x="718" y="833">PLANNED</text><text x="875" y="833">PLANNED</text>
+        <text x="548" y="880">PLANNED</text><text x="718" y="880">PLANNED</text><text x="875" y="880">PLANNED</text>
+        <text x="548" y="927">PLANNED</text><text x="718" y="927">PLANNED</text><text x="875" y="927">PLANNED</text>
+      </g>
+    </g>
+  </g>
+
+  <rect x="980" y="360" width="388" height="583" rx="20" fill="#FFFFFF" stroke="#D8E0EB"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="1012" y="405" fill="#1E304A" font-size="23" font-weight="750">What qualifies?</text>
+    <text x="1012" y="439" fill="#67768A" font-size="15">A real capture from the matching</text>
+    <text x="1012" y="462" fill="#67768A" font-size="15">application build, never a mock-up.</text>
+
+    <circle cx="1026" cy="518" r="13" fill="#D9EEE9"/><path d="M1020 518l4 4 8-9" stroke="#277E6A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="1052" y="524" fill="#263B54" font-size="16" font-weight="650">Actual running application</text>
+    <circle cx="1026" cy="577" r="13" fill="#D9EEE9"/><path d="M1020 577l4 4 8-9" stroke="#277E6A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="1052" y="583" fill="#263B54" font-size="16" font-weight="650">Exact product and version</text>
+    <circle cx="1026" cy="636" r="13" fill="#D9EEE9"/><path d="M1020 636l4 4 8-9" stroke="#277E6A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="1052" y="642" fill="#263B54" font-size="16" font-weight="650">Source commit and platform</text>
+    <circle cx="1026" cy="695" r="13" fill="#D9EEE9"/><path d="M1020 695l4 4 8-9" stroke="#277E6A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="1052" y="701" fill="#263B54" font-size="16" font-weight="650">Passing workflow evidence</text>
+    <circle cx="1026" cy="754" r="13" fill="#D9EEE9"/><path d="M1020 754l4 4 8-9" stroke="#277E6A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="1052" y="760" fill="#263B54" font-size="16" font-weight="650">Fictional, privacy-safe data</text>
+
+    <rect x="1012" y="810" width="324" height="92" rx="14" fill="#FFF6E7" stroke="#E9D7B4"/>
+    <text x="1034" y="845" fill="#785B2D" font-size="15" font-weight="750">CONCEPTS ARE NOT EVIDENCE</text>
+    <text x="1034" y="872" fill="#806E50" font-size="14">Diagrams and mock-ups stay labelled</text>
+    <text x="1034" y="892" fill="#806E50" font-size="14">as concepts until real capture.</text>
+  </g>
+  <text x="1368" y="990" text-anchor="end" fill="#75849A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Planning matrix only · all cells planned · no verified screenshot is represented</text>
+</svg>
