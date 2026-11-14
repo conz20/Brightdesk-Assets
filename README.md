@@ -1,4 +1,4 @@
-# Brightdesk Assets
+| **Product artwork** | Product-specific workspace previews and social banners, mirrored from the ten product repositories and indexed in the gallery. Workspace previews are not verified screenshots. |\n| **Diagrams and concepts** | Architecture, workflow and explanatory diagrams. Mock-ups must remain clearly labelled and must never be presented as proof that a feature works. || **Brand and identity** | Original Brightdesk wordmark and mark, plus the ten product application icons copied from their source repositories. |# Brightdesk Assets
 
 **The shared, offline-first home for original Brightdesk visual assets, product screenshots and supporting media.**
 
