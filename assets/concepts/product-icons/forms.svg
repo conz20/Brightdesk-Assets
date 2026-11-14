@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">Brightdesk Forms product icon concept</title>
+<desc id="desc">Original Forms icon concept in the shared Brightdesk visual language. Concept artwork only, not an approved final product icon.</desc>
+<rect x="10" y="10" width="236" height="236" rx="48" fill="#F3F6FA" stroke="#DCE4ED" stroke-width="3"/>
+<circle cx="199" cy="55" r="29" fill="#D46B78" opacity=".13"/>
+<circle cx="54" cy="204" r="20" fill="#D46B78" opacity=".10"/>
+<g><rect x="77" y="61" width="102" height="137" rx="13" fill="#fff" stroke="#26384d" stroke-width="9"/><rect x="105" y="48" width="46" height="25" rx="8" fill="#f5dce0" stroke="#26384d" stroke-width="7"/><rect x="96" y="94" width="64" height="19" rx="6" fill="#f5dce0" stroke="#D46B78" stroke-width="5"/><rect x="96" y="126" width="64" height="19" rx="6" fill="#fff" stroke="#D46B78" stroke-width="5"/><path d="M98 166l13 12 27-29" fill="none" stroke="#26966E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="18" y="18" width="220" height="220" rx="42" fill="none" stroke="#D46B78" stroke-width="4" opacity=".45"/>
+</svg>

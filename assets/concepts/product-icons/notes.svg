@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">Brightdesk Notes product icon concept</title>
+<desc id="desc">Original Notes icon concept in the shared Brightdesk visual language. Concept artwork only, not an approved final product icon.</desc>
+<rect x="10" y="10" width="236" height="236" rx="48" fill="#F3F6FA" stroke="#DCE4ED" stroke-width="3"/>
+<circle cx="199" cy="55" r="29" fill="#D99A36" opacity=".13"/>
+<circle cx="54" cy="204" r="20" fill="#D99A36" opacity=".10"/>
+<g><path d="M78 59h100v105l-31 31H78z" fill="#fff" stroke="#26384d" stroke-width="9" stroke-linejoin="round"/><path d="M147 164h31l-31 31z" fill="#f7dca9" stroke="#26384d" stroke-width="7" stroke-linejoin="round"/><path d="M98 96h59M98 121h59M98 146h35" stroke="#D99A36" stroke-width="9" stroke-linecap="round"/><path d="M167 48l8 15 16 3-12 11 3 16-15-8-14 8 3-16-12-11 16-3z" fill="#D99A36" stroke="#26384d" stroke-width="5" stroke-linejoin="round"/></g>
+<rect x="18" y="18" width="220" height="220" rx="42" fill="none" stroke="#D99A36" stroke-width="4" opacity=".45"/>
+</svg>
