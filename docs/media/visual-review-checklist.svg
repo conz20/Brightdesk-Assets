@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920" role="img" aria-labelledby="title desc">
+  <title id="title">Brightdesk visual asset review checklist</title>
+  <desc id="desc">Six review gates for an asset: authenticity, rights, legibility, accessibility, product fit and provenance. An asset is approved only when all gates pass; otherwise it remains on hold.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10182C"/><stop offset="1" stop-color="#1B2944"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#293A58"/><stop offset="1" stop-color="#202E49"/></linearGradient>
+  </defs>
+  <rect width="1440" height="920" rx="30" fill="url(#bg)"/>
+  <circle cx="1300" cy="90" r="215" fill="#426A9A" opacity=".12"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="76" y="82" fill="#A8C7E8" font-size="17" font-weight="700" letter-spacing="3">BRIGHTDESK  /  VISUAL QUALITY</text>
+    <text x="76" y="151" fill="#F5F8FF" font-size="52" font-weight="750">Six gates before approval</text>
+    <text x="78" y="192" fill="#C1CEE1" font-size="22">Check the file, its purpose and its evidence — not just how it looks.</text>
+    <rect x="1120" y="112" width="240" height="42" rx="21" fill="#3A4C68" stroke="#6B829F"/>
+    <text x="1240" y="139" text-anchor="middle" fill="#F5DCA1" font-size="14" font-weight="700" letter-spacing="1">REVIEW FRAMEWORK</text>
+
+    <g>
+      <rect x="72" y="252" width="800" height="82" rx="17" fill="url(#panel)" stroke="#4A6687"/>
+      <circle cx="120" cy="293" r="22" fill="#376B83"/>
+      <path d="M108 293l8 8 16-17" fill="none" stroke="#C8EDFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="164" y="287" fill="#F4F7FC" font-size="23" font-weight="700">1. Authenticity</text>
+      <text x="164" y="315" fill="#C6D2E4" font-size="17">A screenshot must be a direct capture of the real running product.</text>
+
+      <rect x="72" y="350" width="800" height="82" rx="17" fill="url(#panel)" stroke="#4A6687"/>
+      <circle cx="120" cy="391" r="22" fill="#785D37"/>
+      <path d="M110 382h13l7 7v15h-20zM123 382v7h7" fill="none" stroke="#FFE0A6" stroke-width="2.4" stroke-linejoin="round"/>
+      <text x="164" y="385" fill="#F4F7FC" font-size="23" font-weight="700">2. Rights and source</text>
+      <text x="164" y="413" fill="#C6D2E4" font-size="17">Creator, source and explicit reuse or redistribution permission are recorded.</text>
+
+      <rect x="72" y="448" width="800" height="82" rx="17" fill="url(#panel)" stroke="#4A6687"/>
+      <circle cx="120" cy="489" r="22" fill="#654F88"/>
+      <path d="M108 480h24v18h-24zM113 486h14m-14 6h10" fill="none" stroke="#E2D5FF" stroke-width="2.3" stroke-linecap="round"/>
+      <text x="164" y="483" fill="#F4F7FC" font-size="23" font-weight="700">3. Legibility</text>
+      <text x="164" y="511" fill="#C6D2E4" font-size="17">The visual remains clear at its intended size and on supported screens.</text>
+
+      <rect x="72" y="546" width="800" height="82" rx="17" fill="url(#panel)" stroke="#4A6687"/>
+      <circle cx="120" cy="587" r="22" fill="#386B58"/>
+      <path d="M108 587h24m-12-12v24" fill="none" stroke="#C8F5DD" stroke-width="2.6" stroke-linecap="round"/>
+      <text x="164" y="581" fill="#F4F7FC" font-size="23" font-weight="700">4. Accessibility</text>
+      <text x="164" y="609" fill="#C6D2E4" font-size="17">Meaningful alt text, contrast and readable labels are checked.</text>
+
+      <rect x="72" y="644" width="800" height="82" rx="17" fill="url(#panel)" stroke="#4A6687"/>
+      <circle cx="120" cy="685" r="22" fill="#2E706F"/>
+      <path d="M108 680h24v13h-24zM114 674h12" fill="none" stroke="#B7F3E4" stroke-width="2.4" stroke-linecap="round"/>
+      <text x="164" y="679" fill="#F4F7FC" font-size="23" font-weight="700">5. Product fit</text>
+      <text x="164" y="707" fill="#C6D2E4" font-size="17">The file matches the feature and product it is meant to explain.</text>
+
+      <rect x="72" y="742" width="800" height="82" rx="17" fill="url(#panel)" stroke="#4A6687"/>
+      <circle cx="120" cy="783" r="22" fill="#3A588A"/>
+      <path d="M110 773h20v20h-20zM114 779h12m-12 6h12m-12 5h8" fill="none" stroke="#C9DAFF" stroke-width="2.2" stroke-linecap="round"/>
+      <text x="164" y="777" fill="#F4F7FC" font-size="23" font-weight="700">6. Provenance</text>
+      <text x="164" y="805" fill="#C6D2E4" font-size="17">Stable ID, checksum and tested-build evidence are recorded where required.</text>
+    </g>
+
+    <rect x="916" y="252" width="452" height="572" rx="24" fill="#202E49" stroke="#4A6687"/>
+    <text x="960" y="308" fill="#F4F7FC" font-size="27" font-weight="700">Decision</text>
+    <rect x="958" y="350" width="368" height="146" rx="18" fill="#244D4E" stroke="#65AFA1"/>
+    <circle cx="1008" cy="397" r="24" fill="#2C786E"/>
+    <path d="M996 397l9 9 17-19" fill="none" stroke="#C8F5EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1050" y="403" fill="#E1F6EF" font-size="24" font-weight="700">APPROVE</text>
+    <text x="990" y="447" fill="#D4EAE5" font-size="17">All six gates pass, and the</text>
+    <text x="990" y="474" fill="#D4EAE5" font-size="17">evidence matches the file.</text>
+
+    <rect x="958" y="530" width="368" height="146" rx="18" fill="#493D34" stroke="#9A7851"/>
+    <circle cx="1008" cy="577" r="24" fill="#785D37"/>
+    <path d="M1008 565v15m0 8v1" stroke="#FFE0A6" stroke-width="3" stroke-linecap="round"/>
+    <text x="1050" y="583" fill="#FFE6B7" font-size="24" font-weight="700">HOLD</text>
+    <text x="990" y="627" fill="#E6D4BD" font-size="17">Any gate is missing, unclear</text>
+    <text x="990" y="654" fill="#E6D4BD" font-size="17">or cannot be verified.</text>
+
+    <text x="960" y="730" fill="#AFC1D8" font-size="16">Do not add held files to the</text>
+    <text x="960" y="756" fill="#AFC1D8" font-size="16">approved manifest or ship them.</text>
+    <text x="1368" y="898" text-anchor="end" fill="#8FA3BE" font-size="13">Brightdesk documentation diagram · not an approval record</text>
+  </g>
+</svg>
