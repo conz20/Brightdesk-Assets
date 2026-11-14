@@ -45,6 +45,25 @@ The following additional diagrams explain how assets are reviewed and delivered.
 
 These diagrams support the library's governance and engineering workflow. They do not replace actual application captures or evidence from tested builds.
 
+## Product guide workflow diagrams
+
+Ten original Brightdesk workflow illustrations are stored in the shared library, one for each approved customer product. They explain simple three-step product workflows for Help content; **they are documentation diagrams, not screenshots of the running applications, not verified UI evidence and not approved distributable product artwork**.
+
+| Product | Workflow illustration |
+| --- | --- |
+| Pages | [guide-pages.svg](docs/media/guide-pages.svg) |
+| Sheets | [guide-sheets.svg](docs/media/guide-sheets.svg) |
+| Decks | [guide-decks.svg](docs/media/guide-decks.svg) |
+| Notes | [guide-notes.svg](docs/media/guide-notes.svg) |
+| Database | [guide-database.svg](docs/media/guide-database.svg) |
+| Forms | [guide-forms.svg](docs/media/guide-forms.svg) |
+| Lists | [guide-lists.svg](docs/media/guide-lists.svg) |
+| Planner | [guide-planner.svg](docs/media/guide-planner.svg) |
+| To Do | [guide-to-do.svg](docs/media/guide-to-do.svg) |
+| Workspace | [guide-workspace.svg](docs/media/guide-workspace.svg) |
+
+Source and file-level provenance are recorded in [product guide illustration provenance](docs/product-guide-illustrations.md). All ten remain documentation-only; they are not added to `assets/manifest.json`.
+
 ## Current repository status
 
 - The versioned asset manifest, JSON Schema and local validator are implemented.
