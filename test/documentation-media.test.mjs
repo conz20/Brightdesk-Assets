@@ -31,7 +31,7 @@ function inspectXmlElements(source) {
 }
 
 test("documentation SVGs are accessible, self-contained and structurally balanced", async () => {
-  assert.ok(svgFiles.length >= 6, "expected the two existing diagrams and four governance diagrams");
+  assert.ok(svgFiles.length >= 16, "expected the two original, four governance and ten product-guide diagrams");
 
   for (const filename of svgFiles) {
     const source = await readFile(new URL(filename, mediaDirectory), "utf8");
@@ -54,5 +54,18 @@ test("README links every documentation SVG in the asset library", async () => {
   const readme = await readFile(new URL("../README.md", import.meta.url), "utf8");
   for (const filename of svgFiles) {
     assert.ok(readme.includes("docs/media/" + filename), "README must reference " + filename);
+  }
+});
+
+
+test("documentation-only media remains outside the distributable asset manifest", async () => {
+  const manifest = JSON.parse(await readFile(new URL("../assets/manifest.json", import.meta.url), "utf8"));
+  assert.ok(Array.isArray(manifest.assets), "asset manifest must expose an assets array");
+  const approvedPaths = new Set(manifest.assets.map(asset => asset.path));
+  for (const filename of svgFiles) {
+    assert.ok(
+      !approvedPaths.has("docs/media/" + filename),
+      filename + " is documentation media, not a distributable customer asset"
+    );
   }
 });
