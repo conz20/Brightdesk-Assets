@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Brightdesk offline asset delivery boundary</title>
+  <desc id="desc">Approved assets are validated during development and bundled into each desktop product. The installed product reads local files. Runtime CDN access, remote asset fetching, tracking and cloud content are outside the boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10182C"/><stop offset="1" stop-color="#1B2944"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#80D7C3"/><stop offset="1" stop-color="#8CB7FF"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#293A58"/><stop offset="1" stop-color="#202E49"/></linearGradient>
+  </defs>
+  <rect width="1440" height="900" rx="30" fill="url(#bg)"/>
+  <circle cx="1300" cy="100" r="220" fill="#426A9A" opacity=".12"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="76" y="82" fill="#A8C7E8" font-size="17" font-weight="700" letter-spacing="3">BRIGHTDESK  /  RUNTIME BOUNDARY</text>
+    <text x="76" y="151" fill="#F5F8FF" font-size="52" font-weight="750">Designed to work offline</text>
+    <text x="78" y="192" fill="#C1CEE1" font-size="22">Assets move into the product at build time, not across the network at runtime.</text>
+    <rect x="1120" y="112" width="240" height="42" rx="21" fill="#3A4C68" stroke="#6B829F"/>
+    <text x="1240" y="139" text-anchor="middle" fill="#F5DCA1" font-size="14" font-weight="700" letter-spacing="1">BOUNDARY DIAGRAM</text>
+
+    <rect x="72" y="258" width="354" height="304" rx="24" fill="url(#panel)" stroke="#4A6687"/>
+    <circle cx="125" cy="316" r="30" fill="#2E706F"/>
+    <path d="M111 310h28v22h-28zM117 304h16" fill="none" stroke="#B7F3E4" stroke-width="2.8" stroke-linecap="round"/>
+    <text x="174" y="322" fill="#F4F7FC" font-size="27" font-weight="700">1. Asset library</text>
+    <text x="108" y="386" fill="#C6D2E4" font-size="19">Approved original files</text>
+    <text x="108" y="416" fill="#C6D2E4" font-size="19">Rights and provenance records</text>
+    <text x="108" y="446" fill="#C6D2E4" font-size="19">Manifest and SHA-256 digests</text>
+    <rect x="108" y="488" width="280" height="42" rx="12" fill="#213B4B" stroke="#518A84"/>
+    <text x="248" y="515" fill="#BDEBDD" font-size="15" font-weight="700" text-anchor="middle">REPOSITORY SOURCE</text>
+
+    <path d="M438 410h52m-11-10 11 10-11 10" fill="none" stroke="url(#line)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="502" y="258" width="354" height="304" rx="24" fill="url(#panel)" stroke="#4A6687"/>
+    <circle cx="555" cy="316" r="30" fill="#654F88"/>
+    <path d="M539 316l11 11 22-25M541 299h28" fill="none" stroke="#E2D5FF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="604" y="322" fill="#F4F7FC" font-size="27" font-weight="700">2. Build checks</text>
+    <text x="538" y="386" fill="#C6D2E4" font-size="19">Validate paths and file types</text>
+    <text x="538" y="416" fill="#C6D2E4" font-size="19">Verify manifest and file hashes</text>
+    <text x="538" y="446" fill="#C6D2E4" font-size="19">Include approved files in package</text>
+    <rect x="538" y="488" width="280" height="42" rx="12" fill="#322D4E" stroke="#7768A1"/>
+    <text x="678" y="515" fill="#E2D5FF" font-size="15" font-weight="700" text-anchor="middle">BUILD-TIME ONLY</text>
+
+    <path d="M870 410h52m-11-10 11 10-11 10" fill="none" stroke="url(#line)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="934" y="258" width="434" height="304" rx="24" fill="#244D4E" stroke="#65AFA1"/>
+    <circle cx="987" cy="316" r="30" fill="#2C786E"/>
+    <rect x="972" y="303" width="30" height="25" rx="4" fill="none" stroke="#C8F5EA" stroke-width="2.6"/>
+    <path d="M978 310h18m-18 7h18m-18 7h10" stroke="#C8F5EA" stroke-width="2" stroke-linecap="round"/>
+    <text x="1036" y="322" fill="#F4F7FC" font-size="27" font-weight="700">3. Installed product</text>
+    <text x="970" y="386" fill="#D4EAE5" font-size="19">Reads bundled local files</text>
+    <text x="970" y="416" fill="#D4EAE5" font-size="19">Works without asset hosting</text>
+    <text x="970" y="446" fill="#D4EAE5" font-size="19">No runtime download required</text>
+    <rect x="970" y="488" width="358" height="42" rx="12" fill="#1C4948" stroke="#65AFA1"/>
+    <text x="1149" y="515" fill="#C8F5EA" font-size="15" font-weight="700" text-anchor="middle">CUSTOMER DEVICE</text>
+
+    <rect x="72" y="624" width="1296" height="168" rx="22" fill="#3D3039" stroke="#916577"/>
+    <text x="108" y="675" fill="#F2D5E0" font-size="23" font-weight="700">Outside the customer runtime boundary</text>
+    <g fill="none" stroke="#E4A9BD" stroke-width="2.8" stroke-linecap="round">
+      <circle cx="145" cy="728" r="18"/><path d="M132 715l26 26"/>
+      <circle cx="447" cy="728" r="18"/><path d="M434 715l26 26"/>
+      <circle cx="749" cy="728" r="18"/><path d="M736 715l26 26"/>
+      <circle cx="1051" cy="728" r="18"/><path d="M1038 715l26 26"/>
+    </g>
+    <g fill="#EAD6DE" font-size="18">
+      <text x="180" y="735">CDN asset hosting</text>
+      <text x="482" y="735">Remote asset fetching</text>
+      <text x="784" y="735">Telemetry and tracking</text>
+      <text x="1086" y="735">Cloud content storage</text>
+    </g>
+    <text x="1368" y="855" text-anchor="end" fill="#8FA3BE" font-size="13">Brightdesk documentation diagram · local/offline delivery principle</text>
+  </g>
+</svg>
