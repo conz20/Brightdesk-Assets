@@ -68,7 +68,7 @@ Source and file-level provenance are recorded in [product guide illustration pro
 
 - The versioned asset manifest, JSON Schema and local validator are implemented.
 - `assets/manifest.json` is intentionally empty. **There are currently no approved distributable images, artwork or product screenshots in the asset collection.**
-- The six SVGs in `docs/media/` are README and governance documentation diagrams. They explain the collection, capture plan, review and delivery boundaries; they are not customer product assets, genuine product screenshots or entries in the approved manifest.
+- The sixteen SVGs in `docs/media/` are README, governance and product-guide documentation diagrams. They explain the collection, capture plan, review/delivery boundaries and simple three-step product workflows; they are not customer product assets, genuine product screenshots or entries in the approved manifest.
 - Real product screenshots will be added only when matching tested-build evidence is available. Concepts will remain labelled as concepts until replaced by real captures.
 
 This distinction is deliberate: the README can explain what the repository is being built to contain without pretending that uncreated or unverified assets already exist.
