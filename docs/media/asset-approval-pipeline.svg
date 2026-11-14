@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920" role="img" aria-labelledby="title desc">
+  <title id="title">Brightdesk asset approval pipeline</title>
+  <desc id="desc">Six stages for approving an asset: define its purpose, record source and rights, review quality, validate metadata and checksum, approve the manifest entry, and bundle locally. Any missing proof keeps the asset on hold.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10182C"/><stop offset="1" stop-color="#1B2944"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#80D7C3"/><stop offset="1" stop-color="#8CB7FF"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#293A58"/><stop offset="1" stop-color="#202E49"/></linearGradient>
+  </defs>
+  <rect width="1440" height="920" rx="30" fill="url(#bg)"/>
+  <circle cx="1320" cy="90" r="210" fill="#426A9A" opacity=".12"/>
+  <circle cx="100" cy="860" r="260" fill="#43B69F" opacity=".07"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="76" y="82" fill="#A8C7E8" font-size="17" font-weight="700" letter-spacing="3">BRIGHTDESK  /  ASSET GOVERNANCE</text>
+    <text x="76" y="151" fill="#F5F8FF" font-size="52" font-weight="750">From source to approved asset</text>
+    <text x="78" y="192" fill="#C1CEE1" font-size="22">Every distributable file passes the same evidence-led route.</text>
+    <rect x="1120" y="112" width="240" height="42" rx="21" fill="#3A4C68" stroke="#6B829F"/>
+    <text x="1240" y="139" text-anchor="middle" fill="#F5DCA1" font-size="14" font-weight="700" letter-spacing="1">DOCUMENTATION DIAGRAM</text>
+
+    <g>
+      <rect x="72" y="252" width="396" height="190" rx="22" fill="url(#panel)" stroke="#4A6687"/>
+      <circle cx="119" cy="302" r="25" fill="#2E706F"/>
+      <path d="M108 303h22M119 292v22" stroke="#B7F3E4" stroke-width="3" stroke-linecap="round"/>
+      <text x="160" y="307" fill="#F4F7FC" font-size="25" font-weight="700">1. Define the need</text>
+      <text x="104" y="356" fill="#C6D2E4" font-size="18">Record where it will be used,</text>
+      <text x="104" y="384" fill="#C6D2E4" font-size="18">who needs it and why it helps.</text>
+    </g>
+    <path d="M475 347h32m-9-9 9 9-9 9" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <rect x="520" y="252" width="396" height="190" rx="22" fill="url(#panel)" stroke="#4A6687"/>
+      <circle cx="567" cy="302" r="25" fill="#785D37"/>
+      <path d="M557 291h16l6 6v17h-22zM573 291v7h6" fill="none" stroke="#FFE0A6" stroke-width="2.4" stroke-linejoin="round"/>
+      <text x="608" y="307" fill="#F4F7FC" font-size="25" font-weight="700">2. Prove its source</text>
+      <text x="552" y="356" fill="#C6D2E4" font-size="18">Name the creator, source and</text>
+      <text x="552" y="384" fill="#C6D2E4" font-size="18">explicit redistribution permission.</text>
+    </g>
+    <path d="M923 347h32m-9-9 9 9-9 9" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <rect x="968" y="252" width="396" height="190" rx="22" fill="url(#panel)" stroke="#4A6687"/>
+      <circle cx="1015" cy="302" r="25" fill="#654F88"/>
+      <path d="M1002 302l9 9 17-20" fill="none" stroke="#E2D5FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="1056" y="307" fill="#F4F7FC" font-size="25" font-weight="700">3. Review quality</text>
+      <text x="1000" y="356" fill="#C6D2E4" font-size="18">Check purpose, clarity, contrast,</text>
+      <text x="1000" y="384" fill="#C6D2E4" font-size="18">alt text and product suitability.</text>
+    </g>
+
+    <path d="M1166 450v48h-892v26m-9-9 9 9 9-9" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <rect x="72" y="548" width="396" height="190" rx="22" fill="url(#panel)" stroke="#4A6687"/>
+      <circle cx="119" cy="598" r="25" fill="#376B83"/>
+      <path d="M107 598l8 8 16-17M107 586h24" fill="none" stroke="#C8EDFF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="160" y="603" fill="#F4F7FC" font-size="25" font-weight="700">4. Validate the record</text>
+      <text x="104" y="652" fill="#C6D2E4" font-size="18">Check the manifest schema, safe</text>
+      <text x="104" y="680" fill="#C6D2E4" font-size="18">path, file type and SHA-256 hash.</text>
+    </g>
+    <path d="M475 643h32m-9-9 9 9-9 9" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <rect x="520" y="548" width="396" height="190" rx="22" fill="url(#panel)" stroke="#4A6687"/>
+      <circle cx="567" cy="598" r="25" fill="#386B58"/>
+      <path d="M555 598l8 8 17-19" fill="none" stroke="#C8F5DD" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="608" y="603" fill="#F4F7FC" font-size="25" font-weight="700">5. Approve the entry</text>
+      <text x="552" y="652" fill="#C6D2E4" font-size="18">Only approved evidence enters</text>
+      <text x="552" y="680" fill="#C6D2E4" font-size="18">the distributable asset manifest.</text>
+    </g>
+    <path d="M923 643h32m-9-9 9 9-9 9" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <rect x="968" y="548" width="396" height="190" rx="22" fill="#244D4E" stroke="#65AFA1"/>
+      <circle cx="1015" cy="598" r="25" fill="#2C786E"/>
+      <path d="M1002 588h26v20h-26zM1008 583h14" fill="none" stroke="#C8F5EA" stroke-width="2.6" stroke-linecap="round"/>
+      <text x="1056" y="603" fill="#F4F7FC" font-size="25" font-weight="700">6. Bundle locally</text>
+      <text x="1000" y="652" fill="#D4EAE5" font-size="18">Package approved files with the</text>
+      <text x="1000" y="680" fill="#D4EAE5" font-size="18">product so they work offline.</text>
+    </g>
+
+    <rect x="72" y="790" width="1292" height="74" rx="18" fill="#493D34" stroke="#9A7851"/>
+    <path d="M111 812l15 29h-30z" fill="none" stroke="#F5DCA1" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M111 821v9m0 5v1" stroke="#F5DCA1" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="148" y="821" fill="#FFE6B7" font-size="18" font-weight="700">HOLD RULE</text>
+    <text x="148" y="846" fill="#E6D4BD" font-size="17">Missing source, rights, validation or evidence? Keep the file out of the approved manifest and customer builds.</text>
+    <text x="1360" y="895" text-anchor="end" fill="#8FA3BE" font-size="13">Brightdesk documentation diagram · not an approved asset catalogue</text>
+  </g>
+</svg>
