@@ -31,6 +31,29 @@ A product preview, illustration, mock-up or social banner is **not** a genuine a
 
 See [the screenshot coverage plan](docs/media/screenshot-coverage-plan.svg), [evidence template](docs/media/screenshot-evidence-template.svg) and [product guide illustration register](docs/product-guide-illustrations.md).
 
+## Supporting documentation SVGs
+
+The following 16 SVGs are original help, workflow and governance diagrams. They are documentation illustrations, not screenshots of running product builds.
+
+| Diagram | File |
+| --- | --- |
+| Asset approval pipeline | [docs/media/asset-approval-pipeline.svg](docs/media/asset-approval-pipeline.svg) |
+| Asset library blueprint | [docs/media/asset-library-blueprint.svg](docs/media/asset-library-blueprint.svg) |
+| Product guide — Database | [docs/media/guide-database.svg](docs/media/guide-database.svg) |
+| Product guide — Decks | [docs/media/guide-decks.svg](docs/media/guide-decks.svg) |
+| Product guide — Forms | [docs/media/guide-forms.svg](docs/media/guide-forms.svg) |
+| Product guide — Lists | [docs/media/guide-lists.svg](docs/media/guide-lists.svg) |
+| Product guide — Notes | [docs/media/guide-notes.svg](docs/media/guide-notes.svg) |
+| Product guide — Pages | [docs/media/guide-pages.svg](docs/media/guide-pages.svg) |
+| Product guide — Planner | [docs/media/guide-planner.svg](docs/media/guide-planner.svg) |
+| Product guide — Sheets | [docs/media/guide-sheets.svg](docs/media/guide-sheets.svg) |
+| Product guide — To Do | [docs/media/guide-to-do.svg](docs/media/guide-to-do.svg) |
+| Product guide — Workspace | [docs/media/guide-workspace.svg](docs/media/guide-workspace.svg) |
+| Offline asset delivery | [docs/media/offline-asset-delivery.svg](docs/media/offline-asset-delivery.svg) |
+| Screenshot coverage plan | [docs/media/screenshot-coverage-plan.svg](docs/media/screenshot-coverage-plan.svg) |
+| Screenshot evidence template | [docs/media/screenshot-evidence-template.svg](docs/media/screenshot-evidence-template.svg) |
+| Visual review checklist | [docs/media/visual-review-checklist.svg](docs/media/visual-review-checklist.svg) |
+
 ## Current approval status
 
 - `assets/manifest.json` is intentionally empty.
