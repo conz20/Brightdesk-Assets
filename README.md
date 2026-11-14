@@ -32,11 +32,24 @@ The intended customer screenshot set covers the Suite and exactly ten products a
 
 A screenshot can be approved only after it is captured from the actual running application and tied to the exact build that passed its relevant workflow. A hand-drawn interface, design preview, mock-up or promotional composition is not a verified screenshot.
 
+## Supporting library diagrams
+
+The following additional diagrams explain how assets are reviewed and delivered. They are **documentation only**: none is a distributable product asset, genuine product screenshot, or entry in `assets/manifest.json`.
+
+| Diagram | What it explains |
+| --- | --- |
+| [Asset approval pipeline](docs/media/asset-approval-pipeline.svg) | Source, rights, quality, metadata, checksum, approval and local bundling gates. |
+| [Offline asset delivery](docs/media/offline-asset-delivery.svg) | Build-time validation and local packaging, with remote runtime fetching outside the customer boundary. |
+| [Screenshot evidence template](docs/media/screenshot-evidence-template.svg) | Required build, platform, commit, workflow and capture metadata. The preview area is intentionally blank. |
+| [Visual review checklist](docs/media/visual-review-checklist.svg) | Authenticity, rights, legibility, accessibility, product fit and provenance. |
+
+These diagrams support the library's governance and engineering workflow. They do not replace actual application captures or evidence from tested builds.
+
 ## Current repository status
 
 - The versioned asset manifest, JSON Schema and local validator are implemented.
 - `assets/manifest.json` is intentionally empty. **There are currently no approved distributable images, artwork or product screenshots in the asset collection.**
-- The two SVGs shown above are README documentation diagrams stored under `docs/media/`. They explain the intended collection and capture plan; they are not customer product assets and are not listed as approved assets.
+- The six SVGs in `docs/media/` are README and governance documentation diagrams. They explain the collection, capture plan, review and delivery boundaries; they are not customer product assets, genuine product screenshots or entries in the approved manifest.
 - Real product screenshots will be added only when matching tested-build evidence is available. Concepts will remain labelled as concepts until replaced by real captures.
 
 This distinction is deliberate: the README can explain what the repository is being built to contain without pretending that uncreated or unverified assets already exist.
@@ -68,6 +81,8 @@ Customer products must bundle approved assets locally. Do not add runtime networ
 
 Use Node.js **24.22.2**. No runtime dependencies are required.
 
+
+`npm test` also checks that every documentation SVG has an accessible title and description, balanced XML elements, and no external image or script dependency.
 ```sh
 npm test
 npm run validate

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920" role="img" aria-labelledby="title desc">
+  <title id="title">Brightdesk genuine screenshot evidence template</title>
+  <desc id="desc">A documentation template showing where a genuine application capture belongs and which evidence fields must accompany it. The preview area is intentionally blank and does not contain a product screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10182C"/><stop offset="1" stop-color="#1B2944"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#293A58"/><stop offset="1" stop-color="#202E49"/></linearGradient>
+  </defs>
+  <rect width="1440" height="920" rx="30" fill="url(#bg)"/>
+  <circle cx="1290" cy="80" r="220" fill="#426A9A" opacity=".12"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="76" y="82" fill="#A8C7E8" font-size="17" font-weight="700" letter-spacing="3">BRIGHTDESK  /  SCREENSHOT PROVENANCE</text>
+    <text x="76" y="151" fill="#F5F8FF" font-size="52" font-weight="750">A screenshot needs evidence</text>
+    <text x="78" y="192" fill="#C1CEE1" font-size="22">A visual record is accepted only when the capture and tested build match.</text>
+    <rect x="1070" y="112" width="290" height="42" rx="21" fill="#493D34" stroke="#9A7851"/>
+    <text x="1215" y="139" text-anchor="middle" fill="#F5DCA1" font-size="14" font-weight="700" letter-spacing="1">TEMPLATE — NOT A SCREENSHOT</text>
+
+    <rect x="72" y="252" width="790" height="500" rx="24" fill="url(#panel)" stroke="#4A6687"/>
+    <rect x="98" y="280" width="738" height="50" rx="13" fill="#1A2840"/>
+    <circle cx="123" cy="305" r="6" fill="#D98D8D"/>
+    <circle cx="145" cy="305" r="6" fill="#E2C487"/>
+    <circle cx="167" cy="305" r="6" fill="#83C9B7"/>
+    <text x="202" y="312" fill="#AFC1D8" font-size="16" font-weight="600">CAPTURE SLOT</text>
+    <rect x="98" y="350" width="738" height="320" rx="15" fill="#18243A" stroke="#566C8A" stroke-dasharray="10 10"/>
+    <g fill="none" stroke="#8FA3BE" stroke-width="3" stroke-linecap="round">
+      <rect x="398" y="430" width="138" height="105" rx="12"/>
+      <path d="M416 513l34-38 24 25 19-19 26 32"/>
+      <circle cx="480" cy="458" r="10"/>
+    </g>
+    <text x="467" y="578" fill="#F2D5E0" text-anchor="middle" font-size="22" font-weight="700">No screenshot captured</text>
+    <text x="467" y="610" fill="#AFC1D8" text-anchor="middle" font-size="17">Place a direct capture from the tested running application here.</text>
+    <rect x="98" y="692" width="738" height="34" rx="10" fill="#493D34"/>
+    <text x="467" y="715" text-anchor="middle" fill="#F5DCA1" font-size="14" font-weight="700">THIS TEMPLATE CONTAINS NO BRIGHTDESK PRODUCT IMAGE</text>
+
+    <rect x="894" y="252" width="474" height="500" rx="24" fill="#202E49" stroke="#4A6687"/>
+    <text x="932" y="304" fill="#F4F7FC" font-size="25" font-weight="700">Required capture record</text>
+    <g font-size="15" fill="#9FB4D0" font-weight="700" letter-spacing="1">
+      <text x="932" y="355">PRODUCT AND VERSION</text>
+      <text x="932" y="428">OPERATING SYSTEM</text>
+      <text x="932" y="501">SOURCE COMMIT</text>
+      <text x="932" y="574">TEST WORKFLOW</text>
+      <text x="932" y="647">CAPTURE DATE</text>
+      <text x="932" y="720">IMAGE CHECKSUM</text>
+    </g>
+    <g fill="#17243A" stroke="#536B89">
+      <rect x="932" y="366" width="398" height="35" rx="8"/>
+      <rect x="932" y="439" width="398" height="35" rx="8"/>
+      <rect x="932" y="512" width="398" height="35" rx="8"/>
+      <rect x="932" y="585" width="398" height="35" rx="8"/>
+      <rect x="932" y="658" width="398" height="35" rx="8"/>
+      <rect x="932" y="731" width="398" height="1" rx="1" opacity="0"/>
+    </g>
+    <g fill="#F5DCA1" font-size="16">
+      <text x="948" y="390">Awaiting verified capture</text>
+      <text x="948" y="463">Awaiting verified capture</text>
+      <text x="948" y="536">Awaiting verified capture</text>
+      <text x="948" y="609">Awaiting verified capture</text>
+      <text x="948" y="682">Awaiting verified capture</text>
+    </g>
+    <rect x="72" y="798" width="1296" height="68" rx="17" fill="#244D4E" stroke="#65AFA1"/>
+    <text x="108" y="840" fill="#D4F1E9" font-size="19" font-weight="700">Acceptance rule:</text>
+    <text x="285" y="840" fill="#D4EAE5" font-size="18">the source commit, successful workflow, platform and screenshot must all identify the same tested build.</text>
+    <text x="1368" y="898" text-anchor="end" fill="#8FA3BE" font-size="13">Brightdesk documentation template · not a genuine product capture</text>
+  </g>
+</svg>
