@@ -4,6 +4,8 @@
 
 This repository is engineering infrastructure for Brightdesk Suite and its ten approved customer products. It is not a customer product, runtime asset server or CDN. Products bundle the approved files they need so that visuals remain available offline.
 
+**Browse the images:** [Open the complete SVG asset gallery](ASSET-GALLERY.md) for clickable previews and direct links to all 36 SVG files on `main`.
+
 <p align="center">
   <img src="docs/media/asset-library-blueprint.svg" alt="Planning diagram of the Brightdesk visual library: brand identity, product screenshots, help and release media, diagrams, rights records and offline packaging." width="100%">
 </p>
