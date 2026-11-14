@@ -350,3 +350,93 @@ test('rejects an asset replaced by a symlink between path inspection and file op
     message.includes('file does not exist or cannot be read') || message.includes('file changed during validation')
   ));
 });
+
+
+test('rejects Windows-reserved device names in every asset path component', async (t) => {
+  const f = await fixture(t);
+  const invalidPaths = [
+    'assets/CON.svg',
+    'assets/con.svg',
+    'assets/NUL.svg',
+    'assets/PRN.svg',
+    'assets/AUX.svg',
+    'assets/COM1.svg',
+    'assets/LPT9.svg',
+    'assets/COM¹.svg',
+    'assets/COM².svg',
+    'assets/COM³.svg',
+    'assets/LPT¹.svg',
+    'assets/LPT².svg',
+    'assets/LPT³.svg',
+    'COM¹/assets.svg'
+  ];
+
+  for (const relativePath of invalidPaths) {
+    const absolutePath = path.join(f.rootDir, ...relativePath.split('/'));
+    await mkdir(path.dirname(absolutePath), { recursive: true });
+    await writeFile(absolutePath, f.assetBytes);
+    f.record.path = relativePath;
+    f.record.sha256 = digest(f.assetBytes);
+
+    const result = await validateManifest(f.manifest, { rootDir: f.rootDir });
+
+    assert.equal(result.valid, false, `validator accepted Windows-reserved path: ${relativePath}`);
+    assert.ok(
+      result.errors.some((message) => message.includes('Windows-reserved device name')),
+      `validator did not explain the Windows-reserved path: ${relativePath}`
+    );
+  }
+});
+
+
+test('JSON Schema rejects Windows-reserved device names in every asset path component', async () => {
+  const schema = JSON.parse(await readFile(new URL('../schemas/asset-manifest.schema.json', import.meta.url), 'utf8'));
+  const pathPattern = new RegExp(schema.$defs.relativePath.pattern);
+  const invalidPaths = [
+    'assets/CON.svg',
+    'assets/con.svg',
+    'assets/NUL.svg',
+    'assets/PRN.svg',
+    'assets/AUX.svg',
+    'assets/COM1.svg',
+    'assets/LPT9.svg',
+    'assets/COM¹.svg',
+    'assets/COM².svg',
+    'assets/COM³.svg',
+    'assets/LPT¹.svg',
+    'assets/LPT².svg',
+    'assets/LPT³.svg',
+    'COM¹/assets.svg'
+  ];
+
+  for (const relativePath of invalidPaths) {
+    assert.equal(pathPattern.test(relativePath), false, `schema accepted Windows-reserved path: ${relativePath}`);
+  }
+});
+
+
+test('rejects Windows paths with a directory component ending in a period', async (t) => {
+  const f = await fixture(t);
+  const relativePath = 'assets./logo.svg';
+  await mkdir(path.join(f.rootDir, 'assets.'), { recursive: true });
+  await writeFile(path.join(f.rootDir, 'assets.', 'logo.svg'), f.assetBytes);
+  f.record.path = relativePath;
+  f.record.sha256 = digest(f.assetBytes);
+
+  const result = await validateManifest(f.manifest, { rootDir: f.rootDir });
+
+  assert.equal(result.valid, false, 'validator accepted a path Windows normalises');
+  assert.ok(
+    result.errors.some((message) => message.includes('Windows-nonportable path component')),
+    'validator did not explain the trailing-period path component'
+  );
+});
+
+test('JSON Schema rejects path components ending in a period or space', async () => {
+  const schema = JSON.parse(await readFile(new URL('../schemas/asset-manifest.schema.json', import.meta.url), 'utf8'));
+  const pathPattern = new RegExp(schema.$defs.relativePath.pattern);
+
+  for (const relativePath of ['assets./logo.svg', 'assets/child./logo.svg', 'assets /logo.svg']) {
+    assert.equal(pathPattern.test(relativePath), false, 'schema accepted non-portable path: ' + relativePath);
+  }
+});
